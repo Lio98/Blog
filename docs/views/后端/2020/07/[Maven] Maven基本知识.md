@@ -2,10 +2,7 @@
 title: "[Maven] Maven基本知识"
 date: 2020-07-27
 isFull: true
-tags:
-- "Maven"
-categories:
-- "Back-end"
+publish: false
 ---
 **Maven-tomcat插件好像跑不了9...  直接部署tomcat9启动即可**
 

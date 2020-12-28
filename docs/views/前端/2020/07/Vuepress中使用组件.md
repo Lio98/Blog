@@ -15,7 +15,7 @@ sidebar: false
 tags:
 - 'Vuepress'
 categories:
-- 'Front-end'
+- '前端'
 ---
 在Vuepress使用Vue组件
 

@@ -7,7 +7,7 @@ isShowComment: true
 tags:
 - 'Vuepress'
 categories:
-- 'Front-end'
+- '前端'
 ---
 
 ::: tip

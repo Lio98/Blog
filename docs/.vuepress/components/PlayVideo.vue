@@ -20,7 +20,7 @@ export default {
       const str = "//player.bilibili.com/player.html?aid=" + this.aid + "&cid=" + this.cid +"&page=" + p +"&high_quality=1&danmaku=0";
       return str;
     }
- }
+  }
 }
 </script>
 

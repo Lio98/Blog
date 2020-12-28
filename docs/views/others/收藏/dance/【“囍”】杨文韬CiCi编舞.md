@@ -2,14 +2,14 @@
 title: '【“囍”】杨文韬CiCi编舞'
 date: 2020-08-24
 author: "杨文韬 CiCi"
-categories:
-- "Others"
+
 sidebar: false
 isFull: true
 # 文章封面 不填为随机
 pic: 'https://zyj_yida.gitee.io/source/img/mdCover/xi.jpg'
 isShowComments: true
 isShowIndex: false
+publish: false
 ---
 
 ::: tip

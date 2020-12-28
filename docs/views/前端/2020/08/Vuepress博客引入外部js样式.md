@@ -1,13 +1,13 @@
 ---
 title: 'Vuepress博客引入外部js样式'
 date: 2020-08-04
-sidebar: false
+sidebar: true
 isFull: true
 isShowComment: true
 tags:
 - 'Vuepress'
 categories:
-- 'Front-end'
+- '前端'
 ---
 
 ::: tip

@@ -4,11 +4,7 @@ date: 2020-08-11
 sidebar: false
 isShowComment: true
 isFull: true
-tags:
-- 'Jacob'
-- 'Maven'
-categories:
-- 'Back-end'
+publish: false
 ---
 
 ::: tip

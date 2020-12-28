@@ -19,14 +19,12 @@ isShowComment: true
 
 <!-- <AutoInput/> -->
 
-## 移步新blog
+<!-- ## 移步新blog
 
-点击[zhangyujie.top](https://zhangyujie.top)
+点击[zhangyujie.top](https://zhangyujie.top) -->
 
 ### 自我介绍
-张益达
-
-成都制造业转行程序员
+刘涛
 
 后端小白一枚
 
@@ -35,9 +33,9 @@ isShowComment: true
 ### 联系我
 通过邮箱或者下方评论留言都可，记得留下你的邮箱便于及时收到回复
 
-邮箱: yida_zyj@163.com
+邮箱: 863370814@qq.com
 
-QQ： 1040195668
+QQ： 863370814
 
-微信： Undefined_zyj
+微信： lt863370814
 

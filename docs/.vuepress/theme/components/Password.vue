@@ -58,7 +58,7 @@ export default {
   name: 'Password',
   data () {
     return {
-      warningText: 'Konck! Knock!',
+      warningText: '请输入密码!',
       key: ''
     }
   },
@@ -94,13 +94,13 @@ export default {
       passwordBtn.style.opacity = 1
       setTimeout(() => {
         window.location.reload()
-      }, 800)
+      }, 400)
     },
     inputFocus () {
-      this.warningText = 'Input Your Key'
+      this.warningText = '请输入密码!'
     },
     inputBlur () {
-      this.warningText = 'Konck! Knock!'
+      this.warningText = '请输入密码!'
     },
     isHasKey () {
       let { keys } = this.$themeConfig.keyPage
@@ -153,15 +153,15 @@ export default {
     right 0
     margin auto
     display block
-    max-width:700px;
-    height: 100px;
+    max-width:500px;
+    height: 70px;
     background: $accentColor;
     border-radius: $borderRadius
     padding-left 20px
     box-sizing border-box
     opacity 0.9
     input{
-      width:600px;
+      width:400px;
       height:100%;
       border:none;
       padding:0;
@@ -193,7 +193,7 @@ export default {
       height: 100%;
       display: block;
       position: absolute;
-      line-height:100px;
+      line-height:70px;
       top:0;
       left:20px;
       color: #fff;
@@ -205,7 +205,7 @@ export default {
     button{
       overflow hidden
       width:0px;
-      height:98px;
+      height:68px;
       border-radius: $borderRadius
       position: absolute;
       border 1px solid $accentColor

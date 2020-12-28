@@ -33,20 +33,20 @@ module.exports = {
     blogConfig: {
       category: {
         location: 2, // 在导航栏菜单中所占的位置，默认2
-        text: "博客" // 默认 “分类”Category
+        text: "博客分类" // 默认 “分类”Category
       },
       tag: {
         location: 3, // 在导航栏菜单中所占的位置，默认3
         text: "标签" // 默认 “标签”Tag
       },
     },
-    valineConfig: {
-      appId: '',// your appId
-      appKey: '', // your appKey
-      recordIP:true,
-      placeholder:'Lio同学需要你的评论...',
-      visitor:true,
-    },
+    // valineConfig: {
+    //   appId: '',// your appId
+    //   appKey: '', // your appKey
+    //   recordIP:true,
+    //   placeholder:'Lio同学需要你的评论...',
+    //   visitor:true,
+    // },
     nav,
     // logo: 'https://zyj_yida.gitee.io/source/img/ico/logo.png',
     // authorAvatar: "https://zyj_yida.gitee.io/source/img/ico/head.jpg",

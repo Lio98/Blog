@@ -1,46 +1,50 @@
 <template>
-  <header class="navbar" 
-  :style="$themeConfig.fullscreen? {
-        'position': 'relative',
-        'background': 'none',
-        'box-shadow': 'none',
-        'background-color': 'rgba(0, 0, 0, 0.2)'
-      } : {}">
-    <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
-
-    <router-link
-      :to="$localePath"
-      class="home-link">
-      <img
-        class="logo"
-        v-if="$themeConfig.logo"
-        :src="$withBase($themeConfig.logo)"
-        :alt="$siteTitle">
-      <span
-        ref="siteName"
-        :style="$themeConfig.fullscreen ?{'color':'#fff'}:{}"
-        class="site-name"
-        v-if="$siteTitle">{{ $siteTitle }}</span>
-    </router-link>
-
-    <div
-      class="links"
-      :style="linksWrapMaxWidth ? {
-        'max-width': linksWrapMaxWidth + 'px'
-      } : {},
-      $themeConfig.fullscreen ? {
-        'background': 'none'
-      } : {}
-      ">
-
-      <Mode />
-      <AlgoliaSearchBox
-        v-if="isAlgoliaSearch"
-        :options="algolia"/>
-      <SearchBox v-else-if="$themeConfig.search !== false && $frontmatter.search !== false"/>
-      <NavLinks class="can-hide"/>
-    </div>
-  </header>
+  <div>
+    <div style="position:relative;height:57.59px;top:0px"></div>
+    <header class="navbar" 
+    :style="$themeConfig.fullscreen? {
+          'position': 'fixed',
+          'background': 'none',
+          'box-shadow': 'none',
+          'background-color': 'rgba(0, 0, 0, 0.3)',
+          'top': '0px'
+        } : {}">
+      <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
+  
+      <router-link
+        :to="$localePath"
+        class="home-link">
+        <img
+          class="logo"
+          v-if="$themeConfig.logo"
+          :src="$withBase($themeConfig.logo)"
+          :alt="$siteTitle">
+        <span
+          ref="siteName"
+          :style="$themeConfig.fullscreen ?{'color':'#fff'}:{}"
+          class="site-name"
+          v-if="$siteTitle">{{ $siteTitle }}</span>
+      </router-link>
+  
+      <div
+        class="links"
+        :style="linksWrapMaxWidth ? {
+          'max-width': linksWrapMaxWidth + 'px'
+        } : {},
+        $themeConfig.fullscreen ? {
+          'background': 'none'
+        } : {}
+        ">
+  
+        <Mode />
+        <AlgoliaSearchBox
+          v-if="isAlgoliaSearch"
+          :options="algolia"/>
+        <SearchBox v-else-if="$themeConfig.search !== false && $frontmatter.search !== false"/>
+        <NavLinks class="can-hide"/>
+      </div>
+    </header>
+  </div>
 </template>
 
 <script>

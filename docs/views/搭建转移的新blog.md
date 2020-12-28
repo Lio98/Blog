@@ -4,10 +4,7 @@ date: 2020-11-25
 sidebar: false
 isFull: true
 isShowComment: true
-tags:
-- 'blog'
-categories:
-- 'zhangyujie.top'
+publish: false
 ---
 
 ::: tip

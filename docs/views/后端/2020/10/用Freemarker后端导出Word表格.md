@@ -4,10 +4,9 @@ date: 2020-10-30
 sidebar: false
 isShowComment: true
 isFull: true
-tags:
-- 'Mysql'
 categories:
-- 'Back-end'
+- '数据库'
+publish: false
 ---
 
 <!-- more -->
