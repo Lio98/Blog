@@ -15,11 +15,11 @@
   <div class="num">
     <div>
       <h3>{{$recoPosts.length}}</h3>
-      <h6>{{homeBlogCfg.article}}</h6>
+      <h6>文章</h6>
     </div>
     <div>
       <h3>{{$tags.list.length}}</h3>
-      <h6>{{homeBlogCfg.tag}}</h6>
+      <h6>标签</h6>
     </div>
   </div>
   <hr>
