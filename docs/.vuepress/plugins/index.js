@@ -33,7 +33,7 @@ module.exports = {
       autoplay: true,
       // 设置 lrc 歌词解析模式 （0：禁用 lrc 歌词，1：lrc 格式的字符串，3：lrc 文件 url）
       lrcType: 0,
-      autoplay: true
+      // autoplay: true
     }
   },
   // "ribbon":{
@@ -69,6 +69,11 @@ module.exports = {
         opacity: 0.8 // 模型透明度(default: 0.8)
       }
     }
+  },
+  "cursor-effects":{
+    size: 3,                    // 大小
+    shape: ['circle'],  // 散落形状, default: 'star'
+    zIndex: 999999999           // z-index property of the canvas, default: 999999999
   },
   "vuepress-plugin-boxx": {}
 }
