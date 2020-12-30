@@ -33,3 +33,22 @@ keys:
   
   this.View.UpdateView(EntityKey_FBomChildEntity);
   ```
+
+ ### 创建一个单据体数据对象
+  ``` csharp
+
+  protected const string EntityKey_FBomChildEntity = "FBottomEntity";    //单据体标识
+  //方式一
+  {
+      Entity entity = (Entity)this.Model.BillBusinessInfo.GetEntryEntity(EntityKey_FBomChildEntity); 
+      //单据体数据集合
+      DynamicObjectCollection detailDataEntities = this.Model.GetEntityDataObject(entity);
+      //一行数据对象
+      DynamicObject addRow = new DynamicObject(detailDataEntities.DynamicCollectionItemPropertyType);
+  }
+  //方式二
+  {
+      DynamicObjectCollection refMdls = newCfgBillObject[EntityKey_FBomChildEntity] as DynamicObjectCollection;
+      DynamicObject addRow = new DynamicObject(refMdls.DynamicCollectionItemPropertyType);
+  }
+  ```

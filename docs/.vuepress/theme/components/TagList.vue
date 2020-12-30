@@ -37,7 +37,7 @@ export default {
 @require '../styles/mode.styl'
 
 .tags
-  margin 30px 0
+  margin 0
   span
     vertical-align: middle;
     margin: 4px 4px 10px;

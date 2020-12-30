@@ -3,13 +3,8 @@
     <div class="hero" :style="{ ...bgImageStyle}" :class="$themeConfig.fullscreen ? 'fullscreen':''">
       <div style="position: absolute;transform: translate(-50%, -50%);top: 50%;left: 50%;width:70%">
         <ModuleTransition>
-          <img
-            class="hero-img"
-            v-if="recoShowModule && $frontmatter.heroImage"
-            :style="heroImageStyle || {}"
-            :src="$withBase($frontmatter.heroImage)"
-            alt="hero"
-          />
+          <img class="hero-img" v-if="recoShowModule && $frontmatter.heroImage" :style="heroImageStyle || {}"
+            :src="$withBase($frontmatter.heroImage)" alt="hero" />
         </ModuleTransition>
 
         <ModuleTransition delay="0.04">
@@ -19,33 +14,30 @@
         </ModuleTransition>
 
         <ModuleTransition delay="0.08">
-          <p v-if="recoShowModule && $frontmatter.tagline !== null" class="description" style="color: #fff;font-family: Regular,cursive;margin-top:4%">
+          <p v-if="recoShowModule && $frontmatter.tagline !== null" class="description"
+            style="color: #fff;font-family: Regular,cursive;margin-top:4%">
             <!-- {{ $frontmatter.tagline || $description || 'Welcome to your vuePress-theme-reco site' }} -->
-            <AutoInput iid="description" :des= "$frontmatter.tagline || $themeConfig.indexDes || $description || 'Welcome to your vuePress-theme-reco site'"/>
+            <AutoInput iid="description"
+              :des="$frontmatter.tagline || $themeConfig.indexDes || $description || 'Welcome to your vuePress-theme-reco site'" />
           </p>
         </ModuleTransition>
       </div>
-      <FloatingArrow @onClick ="onClick" />
+      <FloatingArrow @onClick="onClick" />
     </div>
 
     <ModuleTransition delay="0.16">
       <div v-show="recoShowModule" class="home-blog-wrapper" style="margin: 3rem auto 0">
         <div class="blog-list">
           <!-- 博客列表 -->
-          <note-abstract
-            :data="$recoPostsIndex"
-            :currentPage="currentPage"></note-abstract>
+          <note-abstract :data="$recoPostsIndex" :currentPage="currentPage"></note-abstract>
           <!-- 分页 -->
-          <pagation
-            class="pagation"
-            :total="$recoPostsIndex.length"
-            :currentPage="currentPage"
+          <pagation class="pagation" :total="$recoPostsIndex.length" :currentPage="currentPage"
             @getCurrentPage="getCurrentPage" />
         </div>
         <div class="info-wrapper">
-          <PersonalInfo/>
+          <PersonalInfo />
           <!-- <h4><i class="iconfont reco-category"></i> {{homeBlogCfg.category}}</h4> -->
-          <h4><i class="iconfont reco-category"></i>分类</h4>
+          <h4 style="font-weight:bold"><i class="iconfont reco-category"></i>分类</h4>
           <ul class="category-wrapper">
             <li class="category-item" v-for="(item, index) in this.$categories.list" :key="index">
               <router-link :to="item.path">
@@ -56,17 +48,19 @@
           </ul>
           <hr>
           <!-- <h4 v-if="$tags.list.length !== 0"><i class="iconfont reco-tag"></i> {{homeBlogCfg.tag}}</h4> -->
-          <h4 v-if="$tags.list.length !== 0"><i class="iconfont reco-tag"></i>标签</h4>
+          <h4 v-if="$tags.list.length !== 0" style="font-weight:bold"><i class="iconfont reco-tag"></i>标签</h4>
           <TagList @getCurrentTag="getPagesByTags" />
           <!-- <h4 v-if="$themeConfig.friendLink && $themeConfig.friendLink.length !== 0"><i class="iconfont reco-friend"></i> {{homeBlogCfg.friendLink}}</h4> -->
-          <h4 v-if="$themeConfig.friendLink && $themeConfig.friendLink.length !== 0"><i class="iconfont reco-friend"></i> 友链</h4>
+          <hr>
+          <h4 v-if="$themeConfig.friendLink && $themeConfig.friendLink.length !== 0" style="font-weight:bold"><i
+              class="iconfont reco-friend"></i> 友链</h4>
           <FriendLink />
         </div>
       </div>
     </ModuleTransition>
 
     <ModuleTransition delay="0.24">
-      <Content v-show="recoShowModule" class="home-center" custom/>
+      <Content v-show="recoShowModule" class="home-center" custom />
     </ModuleTransition>
   </div>
 </template>
@@ -103,6 +97,7 @@ export default {
     }else{
       this.bgUrl = this.timestamp(this.$frontmatter.bgImage);
     }
+    console.log('============',this.bgUrl)
   },
   computed: {
     homeBlogCfg () {
@@ -277,7 +272,7 @@ export default {
         padding-left 0
         .category-item {
           margin-bottom .4rem
-          padding: .4rem .8rem;
+          padding: .1rem .8rem;
           transition: all .5s
           border-radius $borderRadius
           box-shadow var(--box-shadow)

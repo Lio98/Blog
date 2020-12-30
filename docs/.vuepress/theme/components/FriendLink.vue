@@ -147,7 +147,7 @@ export default {
 
 .friend-link-wrapper
   position relative
-  margin 30px 0
+  margin 0
   .friend-link-item
     position relative
     vertical-align: middle;
