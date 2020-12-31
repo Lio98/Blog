@@ -5,7 +5,7 @@ categories:
 - "Csharp"
 tags:
 - 学习笔记
-sidebar: true
+sidebar: auto
 isFull: true
 isShowComments: true
 isShowIndex: true

@@ -56,8 +56,9 @@ module.exports = {
     searchMaxSuggestions: 10,
     // 自动形成侧边导航
     sidebar: "auto",
+    displayAllHeaders: true,
     // 最后更新时间
-    lastUpdated: "Last Updated",
+    // lastUpdated: "Last Updated",
     // 作者
     author: "Lio",
     // 备案号
