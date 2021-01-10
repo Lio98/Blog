@@ -1,5 +1,5 @@
 ---
-title: '【学习笔记】MD5 加密'
+title: 'MD5 加密'
 date: 2020-05-12
 categories:
 - "Csharp"

@@ -1,5 +1,5 @@
 ---
-title: '【学习笔记】上传文件'
+title: '上传文件'
 date: 2020-08-16
 categories:
 - "Csharp"
