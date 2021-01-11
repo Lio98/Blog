@@ -1,5 +1,5 @@
 ---
-title: '【学习笔记】csharp基础'
+title: 'csharp基础'
 date: 2020-2-25
 categories:
 - "Csharp"

@@ -1,5 +1,5 @@
 ---
-title: '【学习笔记】泛型'
+title: '泛型 Generic'
 date: 2020-03-12
 categories:
 - "Csharp"

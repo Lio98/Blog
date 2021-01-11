@@ -1,5 +1,5 @@
 ---
-title: '【学习笔记】DateTime 序列化为json后带字母T'
+title: 'DateTime 序列化为json后带字母T'
 date: 2020-05-09
 categories:
 - "Csharp"
