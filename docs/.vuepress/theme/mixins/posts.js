@@ -4,8 +4,8 @@ export default {
   computed: {
     //随机背景图片
     $coverRandom (){
-      const num = 33;
-      const url = "https://zyj_yida.gitee.io/source/img/indexbg/";
+      const num = 58;
+      const url = "https://allforyou.life/sources/bgImage/";
       const inum = RandomNum(1,num)
       return url + inum + '.jpg';
     },
