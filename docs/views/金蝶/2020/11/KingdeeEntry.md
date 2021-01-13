@@ -52,3 +52,8 @@ keys:
       DynamicObject addRow = new DynamicObject(refMdls.DynamicCollectionItemPropertyType);
   }
   ```
+
+ ### 获取分录行数量
+  ```csharp
+  this.Model.GetEntryRowCount("FTreeEntity");
+  ```
