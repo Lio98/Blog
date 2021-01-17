@@ -8,9 +8,9 @@ module.exports = {
   //     }
   // },
   "dynamic-title": {
-    showIcon: "https://zyj_yida.gitee.io/source/img/ico/favicon.ico",
+    showIcon: "https://allforyou.life/sources/ico/favicon.ico",
     showText: "Welcome Back！",
-    hideIcon: "https://zyj_yida.gitee.io/source/img/ico/favicon.ico",
+    hideIcon: "https://allforyou.life/sources/ico/favicon.ico",
     hideText: "Wait ...",
     recoverTime: 2000
   },
