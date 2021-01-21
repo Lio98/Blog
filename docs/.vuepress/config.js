@@ -8,7 +8,7 @@ module.exports = {
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
     ["script", {"language": "javascript","type": "text/javascript","src": "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"}],
-    ["script", {"language": "javascript","type": "text/javascript","src": "/js/mouseClick.js"}],
+    // ["script", {"language": "javascript","type": "text/javascript","src": "/js/mouseClick.js"}],
     ["script", {"language": "javascript","type": "text/javascript","src": "/js/bg.js"}],
     ["meta", {name: "viewport",content: "width=device-width,initial-scale=1,user-scalable=no"}]
   ],
@@ -26,7 +26,7 @@ module.exports = {
     categoryPic: null,
     tagPic: null,
     timePic: null,
-    modePicker: false,
+    modePicker: true,
     mode: 'light',
     type: "blog",
     // 博客设置
@@ -40,16 +40,7 @@ module.exports = {
         text: "标签" // 默认 “标签”Tag
       },
     },
-    // valineConfig: {
-    //   appId: '',// your appId
-    //   appKey: '', // your appKey
-    //   recordIP:true,
-    //   placeholder:'Lio同学需要你的评论...',
-    //   visitor:true,
-    // },
     nav,
-    // logo: 'https://zyj_yida.gitee.io/source/img/ico/logo.png',
-    // authorAvatar: "https://zyj_yida.gitee.io/source/img/ico/head.jpg",
     authorAvatar: "/head.png",
     // 搜索设置
     search: true,
@@ -57,17 +48,12 @@ module.exports = {
     // 自动形成侧边导航
     sidebar: "auto",
     displayAllHeaders: true,
-    // 最后更新时间
-    // lastUpdated: "Last Updated",
     // 作者
     author: "Lio",
     // 备案号
     record: '陇ICP备2020004133号',
     // 项目开始时间
     startYear: "2020",
-    /**
-     * 密钥 (if your blog is private)
-     */
     friendLink: [
       {
         title: "午后南杂",
@@ -76,16 +62,19 @@ module.exports = {
         link: "https://www.recoluan.com",
       },
       {
-        title: "vuepress-theme-reco",
-        desc: "A simple and beautiful vuepress Blog & Doc theme.",
-        avatar:
-          "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        link: "https://vuepress-theme-reco.recoluan.com",
+        title:'张益达',
+        desc:'',
+        link:'https://zhangyujie.top/'
       },
       {
         title: 'ToFutureSelf',
         desc: '花有重开日，人无再少年',
         link: 'https://zhangfish.gitee.io/'
+      },
+      {
+        title:'饭团也有春天',
+        desc:'',
+        link:'http://www.zpzpup.com/blog/'
       }
     ],
     // vssueConfig: {

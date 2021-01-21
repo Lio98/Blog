@@ -204,6 +204,7 @@ export default {
 </style>
 
 <style lang="stylus">
+
 .home-blog {
   padding: 0;
   margin: 0px auto;

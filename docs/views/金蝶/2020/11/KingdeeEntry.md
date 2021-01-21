@@ -57,3 +57,26 @@ keys:
   ```csharp
   this.Model.GetEntryRowCount("FTreeEntity");
   ```
+
+ ### 获取系统参数
+  ```csharp
+  // Summary:
+  //     获取系统参数值
+  //
+  // Parameters:
+  //   ctx:
+  //     上下文
+  //
+  //   OrgId:
+  //     当前组织ID
+  //
+  //   Category:
+  //     单据标识
+  //
+  //   Key:
+  //     字段ORM属性
+  //
+  //   DefValue:
+  //     默认返回值
+  int para = MFGServiceHelper.GetSystemProfile(Context ctx, long OrgId, string Category, string Key, T DefValue = null)
+  ```

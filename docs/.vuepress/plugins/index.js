@@ -1,12 +1,4 @@
 module.exports = {
-  // '@vuepress/medium-zoom': {
-  //     selector: 'img.zoom-custom-imgs',
-  //     // medium-zoom options here
-  //     // See: https://github.com/francoischalifour/medium-zoom#options
-  //     options: {
-  //         margin: 16
-  //     }
-  // },
   "dynamic-title": {
     showIcon: "https://allforyou.life/sources/ico/favicon.ico",
     showText: "Welcome Back！",
@@ -14,9 +6,8 @@ module.exports = {
     hideText: "Wait ...",
     recoverTime: 2000
   },
-  "vuepress-plugin-nuggets-style-copy":
-  {
-    copyText: "复制代码",
+  "vuepress-plugin-nuggets-style-copy": {
+    copyText: "复制",
     tip: {
       content: "复制成功!"
     }
@@ -28,7 +19,7 @@ module.exports = {
       server: "tencent",
       type: "playlist",
       mid: "1906732760",
-    },          // 不配置该项的话不会出现全局播放器
+    }, // 不配置该项的话不会出现全局播放器
     aplayer: {
       autoplay: true,
       // 设置 lrc 歌词解析模式 （0：禁用 lrc 歌词，1：lrc 格式的字符串，3：lrc 文件 url）
@@ -36,16 +27,6 @@ module.exports = {
       // autoplay: true
     }
   },
-  // "ribbon":{
-  //     size: 90,     // width of the ribbon, default: 90
-  //     opacity: 0.8, // opacity of the ribbon, default: 0.3
-  //     zIndex: -1    // z-index property of the background, default: -1
-  //   }
-  // "cursor-effects":{
-  //     size: 2,                    // size of the particle, default: 2
-  //     shape: 'star',  // shape of the particle, default: 'star'
-  //     zIndex: 999999999           // z-index property of the canvas, default: 999999999
-  //   },
   'vuepress-plugin-helper-live2d': {
     // 是否开启控制台日志打印(default: false)
     log: false,
@@ -70,10 +51,19 @@ module.exports = {
       }
     }
   },
-  "cursor-effects":{
-    size: 3,                    // 大小
-    shape: ['circle'],  // 散落形状, default: 'star'
-    zIndex: 999999999           // z-index property of the canvas, default: 999999999
+  "sakura": {
+    num: 20, // 默认数量
+    show: true, //  是否显示
+    zIndex: -1, // 层级
+    img: {
+      replace: false, // false 默认图 true 换图 需要填写httpUrl地址
+      httpUrl: '...' // 绝对路径
+    }
   },
-  "vuepress-plugin-boxx": {}
+  "cursor-effects": {
+    size: 3, // 大小
+    shape: ['circle'], // 散落形状, default: 'star'
+    zIndex: 999999999 // z-index property of the canvas, default: 999999999
+  },
+  // "vuepress-plugin-boxx": {}
 }
