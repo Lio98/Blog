@@ -15,7 +15,11 @@ keys:
 
 ## 单据体
 
- ### 单据体逐行赋值
+
+<br/>
+
+> 判断一个对象是否为空使用IsEmpty()方法&nbsp;&nbsp;&nbsp;命名空间为 Kingdee.BOS.Util
+### 单据体逐行赋值
   ``` csharp
   protected const string EntityKey_FBomChildEntity = "FBottomEntity";
   
@@ -52,11 +56,9 @@ keys:
       DynamicObject addRow = new DynamicObject(refMdls.DynamicCollectionItemPropertyType);
   }
   ```
+<br>
 
- ### 获取分录行数量
-  ```csharp
-  this.Model.GetEntryRowCount("FTreeEntity");
-  ```
+> 获取分录行数量 this.Model.GetEntryRowCount("FTreeEntity");
 
  ### 获取系统参数
   ```csharp
@@ -80,3 +82,11 @@ keys:
   //     默认返回值
   int para = MFGServiceHelper.GetSystemProfile(Context ctx, long OrgId, string Category, string Key, T DefValue = null)
   ```
+
+ ### 根据单据体类型创建实例对象
+
+  ```csharp
+  Entity entity=this.View.Business.GetEntryEntity("FTreeEntity");
+  DynamicObject data=new DynamicObject(entity.DynamicObjectType);
+  ```
+

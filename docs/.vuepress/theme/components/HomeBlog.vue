@@ -97,7 +97,6 @@ export default {
     }else{
       this.bgUrl = this.timestamp(this.$frontmatter.bgImage);
     }
-    console.log('============',this.bgUrl)
   },
   computed: {
     homeBlogCfg () {
