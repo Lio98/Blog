@@ -4,7 +4,7 @@ export default {
   computed: {
     //随机背景图片
     $coverRandom (){
-      const num = 58;
+      const num = 46;
       const url = "https://allforyou.life/sources/bgImage/";
       const inum = RandomNum(1,num)
       return url + inum + '.jpg';
