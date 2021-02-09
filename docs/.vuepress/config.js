@@ -9,7 +9,7 @@ module.exports = {
     ["link", { rel: "icon", href: "/favicon.ico" }],
     ["script", {"language": "javascript","type": "text/javascript","src": "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"}],
     // ["script", {"language": "javascript","type": "text/javascript","src": "/js/mouseClick.js"}],
-    ["script", {"language": "javascript","type": "text/javascript","src": "/js/bg.js"}],
+    // ["script", {"language": "javascript","type": "text/javascript","src": "/js/bg.js"}],
     ["meta", {name: "viewport",content: "width=device-width,initial-scale=1,user-scalable=no"}]
   ],
   theme: "reco",
@@ -44,10 +44,9 @@ module.exports = {
     authorAvatar: "/head.png",
     // 搜索设置
     search: true,
-    searchMaxSuggestions: 10,
     // 自动形成侧边导航
     sidebar: "auto",
-    displayAllHeaders: true,
+    sidebarDepth: 2,
     // 作者
     author: "Lio",
     // 备案号
@@ -67,23 +66,11 @@ module.exports = {
         link:'https://zhangyujie.top/'
       },
       {
-        title: 'ToFutureSelf',
-        desc: '花有重开日，人无再少年',
-        link: 'https://zhangfish.gitee.io/'
-      },
-      {
         title:'饭团也有春天',
         desc:'',
         link:'http://www.zpzpup.com/blog/'
       }
     ],
-    // vssueConfig: {
-    //   platform: "github",
-    //   owner: "Saszr",
-    //   repo: "blog",
-    //   clientId: process.env.VSSUEID,
-    //   clientSecret: process.env.VSSUESECRET,
-    // },
   },
   plugins: pluginsConf
 };

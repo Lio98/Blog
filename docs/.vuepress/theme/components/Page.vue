@@ -1,42 +1,34 @@
 <template>
   <main class="page" :class="this.isFull?'noright':''" :style="pageStyle">
     <ModuleTransition>
-      <div v-show="recoShowModule && $page.title" class="page-title" :class="this.isFull?'fullPic':''" 
-      :style="(!$themeConfig.fullscreen ?{'margin-top':'2.2rem !important'}:{}),this.isFull?{'background':'url('+ this.cover +')'}:{}"
-      > 
+      <div v-show="recoShowModule && $page.title" class="page-title" :class="this.isFull?'fullPic':''"
+        :style="(!$themeConfig.fullscreen ?{'margin-top':'2.2rem !important'}:{}),this.isFull?{'background':'url('+ this.cover +')'}:{}">
         <div v-if="this.isFull">
-        <h1 style="color: #fff"><center>{{$page.title}}</center></h1>
-        <PageInfo :pageInfo="$page" :showAccessNumber="showAccessNumber" :isFull="true"></PageInfo>
+          <h1 style="color: #fff">
+            <center>{{$page.title}}</center>
+          </h1>
+          <PageInfo :pageInfo="$page" :showAccessNumber="showAccessNumber" :isFull="true"></PageInfo>
         </div v-else>
         <div v-else>
-        <h1>{{$page.title}}</h1>
-        <PageInfo :pageInfo="$page" :showAccessNumber="showAccessNumber"></PageInfo>
+          <h1>{{$page.title}}</h1>
+          <PageInfo :pageInfo="$page" :showAccessNumber="showAccessNumber"></PageInfo>
         </div>
       </div>
     </ModuleTransition>
 
     <ModuleTransition delay="0.08">
-      <Content v-show="recoShowModule" class="theme-reco-content" :style="this.isFull ?{'padding-top':'4rem !important'}:{}"/>
+      <Content v-show="recoShowModule" class="theme-reco-content"
+        :style="this.isFull ?{'padding-top':'4rem !important'}:{}" />
     </ModuleTransition>
 
     <ModuleTransition delay="0.16">
       <footer v-show="recoShowModule" class="page-edit">
-        <div
-          class="edit-link"
-          v-if="editLink"
-        >
-          <a
-            :href="editLink"
-            target="_blank"
-            rel="noopener noreferrer"
-          >{{ editLinkText }}</a>
-          <OutboundLink/>
+        <div class="edit-link" v-if="editLink">
+          <a :href="editLink" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
+          <OutboundLink />
         </div>
 
-        <div
-          class="last-updated"
-          v-if="lastUpdated"
-        >
+        <div class="last-updated" v-if="lastUpdated">
           <span class="prefix">{{ lastUpdatedText }}: </span>
           <span class="time">{{ lastUpdated }}</span>
         </div>
@@ -46,28 +38,15 @@
     <ModuleTransition delay="0.24">
       <div class="page-nav" v-if="recoShowModule && (prev || next)">
         <p class="inner">
-          <span
-            v-if="prev"
-            class="prev"
-          >
+          <span v-if="prev" class="prev">
             ←
-            <router-link
-              v-if="prev"
-              class="prev"
-              :to="prev.path"
-            >
+            <router-link v-if="prev" class="prev" :to="prev.path">
               {{ prev.title || prev.path }}
             </router-link>
           </span>
 
-          <span
-            v-if="next"
-            class="next"
-          >
-            <router-link
-              v-if="next"
-              :to="next.path"
-            >
+          <span v-if="next" class="next">
+            <router-link v-if="next" :to="next.path">
               {{ next.title || next.path }}
             </router-link>
             →
@@ -77,11 +56,11 @@
     </ModuleTransition>
 
     <ModuleTransition delay="0.32">
-      <Comments v-if="recoShowModule" :isShowComments="shouldShowComments"/>
+      <Comments v-if="recoShowModule" :isShowComments="shouldShowComments" />
     </ModuleTransition>
 
     <ModuleTransition delay="0.08">
-      <SubSidebar v-if="recoShowModule" class="side-bar" :style="this.isFull?{'display':'none'}:{}"/>
+      <SubSidebar v-if="recoShowModule" class="side-bar" :style="this.isFull?{'display':'none'}:{}" />
     </ModuleTransition>
   </main>
 </template>

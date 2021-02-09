@@ -6,7 +6,6 @@ categories:
 tags:
 - 学习笔记
 sidebar: true
-isFull: true
 isShowComments: true
 isShowIndex: true
 ---
@@ -14,7 +13,7 @@ isShowIndex: true
 ::: tip
 反射调用实例方法、静态方法、重载方法、私有方法、泛型方法
 
-反射字段和属性，分别获取值和设定值
+反射--字段和属性，分别获取值和设定值
 :::
 <!-- more -->
 

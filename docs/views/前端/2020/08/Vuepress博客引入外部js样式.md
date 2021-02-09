@@ -10,16 +10,6 @@ categories:
 - '前端'
 ---
 
-::: tip
-为了丰富自己的blog样式
-
-除了引入现有插件外，还可以引入外部js等来丰富效果
-
-mark一下...
-:::
-
-<!-- more -->
-
 ## config中引入脚本与样式
 
 通过配置 .vuepress/config.js 中的 head 来引入脚本与样式。

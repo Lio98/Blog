@@ -10,16 +10,6 @@ categories:
 - '前端'
 ---
 
-::: tip
-终于尝试搭建了自己的小blog，本blog采用的[Vuepress](https://www.vuepress.cn/guide/using-vue.html),也是第一次使用。
-
-过程中走了些许弯路，也在慢慢熟悉中，也慢慢使用一些插件可以来装饰blog，我发现自己还挺喜欢装饰自己的小东西的。
-
-以下是记录一下搭建blog中可以使用的插件...
-:::
-
-<!-- more -->
-
 ## vuepress-plugin-ribbon
 描述：为你的博客背景添加一条彩带。
 

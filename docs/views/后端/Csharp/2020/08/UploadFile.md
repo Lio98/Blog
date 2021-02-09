@@ -1,5 +1,5 @@
 ---
-title: '上传文件'
+title: '.Net 上传文件至服务器'
 date: 2020-08-16
 categories:
 - "Csharp"
@@ -10,15 +10,6 @@ isFull: true
 isShowComments: true
 isShowIndex: true
 ---
-
-:::tip
-后台经常遇到上传文件的情况
-
-工作初期遇到这种问题无从下手
-
-记录一下之前写的代码部分
-:::
-<!-- more -->
 
 ## .net farmework上传文件
 ----------
