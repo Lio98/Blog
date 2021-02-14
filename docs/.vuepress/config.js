@@ -46,7 +46,7 @@ module.exports = {
     search: true,
     // 自动形成侧边导航
     sidebar: "auto",
-    sidebarDepth: 2,
+    sidebarDepth: 3,
     // 作者
     author: "Lio",
     // 备案号
