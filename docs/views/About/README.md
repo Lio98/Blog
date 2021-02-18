@@ -1,20 +1,19 @@
 ---
-title: '关于我'
+title: '个人简历'
 date: 2020-12-01
 # 永久链接
 permalink: '/about'
 isTimeLine: false
 sidebar: false
-isFull: true
+isFull: false
 isShowComment: true
+sidebarDepth: 1
 ---
 
 ::: tip
-后来的我们依然走着
+我们可以一次次的撞南墙，我们不能一个个失去理想。
 
-只是不再并肩了
-
-朝各自的人生追寻了
+We can be frustrated again and again, but we cannot lose our ideals one by one.
 :::
 
 <!-- <AutoInput/> -->
@@ -23,7 +22,7 @@ isShowComment: true
 
 点击[zhangyujie.top](https://zhangyujie.top) -->
 
-<h2>个人信息</h2>
+## 个人信息
 
 - 姓名 : 刘涛(男)
 
@@ -33,31 +32,41 @@ isShowComment: true
 
 - 年龄 : 23
 
-- 手机-微信 : 15378886707
+- 手机/微信 : 15378886707
 
 - email : liutao19980127@gmail.com
 
 ****
 
-<h2>技能证书</h2>
+## 技能证书
 
-- 熟练C、C# 编程，.Net Core 及 .Net Framework 框架，编程风格良好;
+- 熟练C#、C 编程，.Net Core 及 .Net Framework 框架，编程风格良好;
 
 - 熟练 Oracle 及 Sql Server 数据库的开发及应用;
 
-- 熟练FineReport报表开发;
-
 - 掌握 Web 前端编程，Vue.js , Layui，Bootstarp，uni-app 框架;
 
+- 掌握理解23种设计模式中常用设计模式;
+
 - 熟练使用 visualstudio，bitbucket，postman 等开发工具;
+
+- 熟练FineReport报表开发;
 
 - CET-4。
 
 ****
 
-<h2>工作经历</h2>
+## 工作经历
 
-  **深圳市赢合科技股份有限公司 (软件工程师) (2019.3-2020.11)**
+  **金蝶国际软件集团有限公司&nbsp;&nbsp;&nbsp;&nbsp;(软件开发工程师)&nbsp;&nbsp;&nbsp;&nbsp;(2020.11-至今)**
+
+  - 工作描述<br>
+
+    1. 金蝶云星空制造领域功能开发及维护；
+
+    2. 负责制造报表、看板的开发。
+
+  **深圳市赢合科技股份有限公司&nbsp;&nbsp;&nbsp;&nbsp;(软件开发工程师)&nbsp;&nbsp;&nbsp;&nbsp;(2019.3-2020.11)**
 
   - 工作描述<br>
 
@@ -69,7 +78,7 @@ isShowComment: true
 
     4. 完成上级领导指派的任务。
 
-  **西安纳维通信技术有限公司 (工程督导) (2018.7-2018.10)**
+  **西安纳维通信技术有限公司&nbsp;&nbsp;&nbsp;&nbsp;(工程督导)&nbsp;&nbsp;&nbsp;&nbsp;(2018.7-2018.10)**
 
   - 工作描述<br>
   
@@ -81,11 +90,21 @@ isShowComment: true
 
 *****
 
-<h2>项目经历</h2>
+## 项目经历
 
-  **售后服务系统(.Net Core + Bootstarp + 小程序)**
+  **金蝶云星空 (.Net FrameWork)**
 
-  **项目周期:** 2020.08 - 至今
+  **项目周期：** 2020.11 - 至今
+
+  **项目描述:** 星空是一款包含不同领域的erp管理系统，生产制造领域通过多组织计划/生产协同，智慧制造，获得了全面的生产质量管理。
+
+  **项目职责:** 负责制造领域中计划管理、生产管理相关的客户提单及开发任务。
+
+  ****
+
+  **售后服务系统 (.Net Core + Bootstarp + 小程序)**
+
+  **项目周期:** 2020.08 - 2020.11
 
   **项目描述:** 该系统应用于三个子公司，对售后人员工作动向，工作流程流转，项目信息等进行管理。采用MVC和uni-app框架，分为小程序和后台两套系统。
 
@@ -93,7 +112,7 @@ isShowComment: true
 
   ******
 
-  **锂电 MES 系统（.Net FrameWork）**
+  **锂电 MES 系统 (.Net FrameWork)**
 
   **项目周期:** 2019.08 - 2020.08
 
@@ -103,7 +122,7 @@ isShowComment: true
 
   ******
 
-  **赢合之家、赢合协作（小程序）**
+  **赢合之家、赢合协作 (小程序)**
 
   **项目周期:** 2020.02 - 2020.04
 
@@ -123,7 +142,7 @@ isShowComment: true
 
   **********
 
-  **博客管理系统（WebApi + Vue、自由项目）**
+  **博客管理系统 (WebApi + Vue、自由项目)**
 
   **项目周期:** 2020.4-2020.5
 
@@ -134,7 +153,7 @@ isShowComment: true
   ********
 
 
-<h2>自我介绍</h2>
+## 自我介绍
 
 - 个人学习能力强,可以快速上手新技术,业务开发；
 
