@@ -79,9 +79,9 @@ isShowIndex: true
 
  - char(8000): 固定长度的字符型 = string
 
- - varchar(8000): 可变长度,汉字占两个字节，英文字母占一个字节
+ - varchar(8000): 可变长度,汉字占 2 个字节，英文字母占 1 个字节
 
- - nvarchar(8000): unicode 可变长度字符型，一个长度既可以存储中文也可以存储一各英文
+ - nvarchar(8000): unicode 可变长度字符型，中文和英文都占 2 个字节
 
  - datetime: 时间日期型
 
