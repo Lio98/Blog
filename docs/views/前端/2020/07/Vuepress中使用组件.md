@@ -17,9 +17,7 @@ tags:
 categories:
 - '前端'
 ---
-在Vuepress使用Vue组件
 
-<!-- more -->
 
 所有在`.vuepress/components`中找到的`*.vue`文件将会自动地被注册为全局的异步组件，如：
 
