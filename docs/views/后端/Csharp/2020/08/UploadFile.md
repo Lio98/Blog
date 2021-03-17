@@ -292,7 +292,24 @@ isShowIndex: true
              }
  
          }
+
+
+        public IHttpActionResult getTest2()
+        {
  
+            string id=HttpContext.Current.Request["id"];
+            string name = HttpContext.Current.Request["name"];
+            HttpFileCollection files = HttpContext.Current.Request.Files;
+ 
+            foreach (string key in files.AllKeys)
+            {
+                HttpPostedFile file = files[key];//file.ContentLength文件长度
+                if (string.IsNullOrEmpty(file.FileName) == false)
+                    file.SaveAs(HttpContext.Current.Server.MapPath("~/App_Data/") + file.FileName);
+            }
+ 
+            return Ok("success2");
+        }
      }
  }
  ```
