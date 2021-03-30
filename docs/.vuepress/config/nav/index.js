@@ -7,15 +7,26 @@ module.exports = [
   { text: "时间轴", link: "/timeline/", icon: "reco-date" }, 
   //grilFriend
   {
+    text: "工具类库",
+    link: "/Tools/",
+    icon: "reco-suggestion",
+    items:
+    [
+      {
+        text: "Http请求",
+        link: "/Tools/Web/HttpRequest/"
+      }
+    ]
+  },
+  {
     text: "女朋友专区",
     link: "/grilFriend/",
-    icon: "reco-account",
+    icon: "reco-message",
     items:
     [
       {
         text: "First",
-        link: "/grilFriend/About/",
-        icon: "reco-account"
+        link: "/grilFriend/About/"
       }
     ]
   },
