@@ -2,9 +2,9 @@
 title: 'WebApi调用'
 date: 2021-03-30
 categories:
-- "Web"
+- "Csharp"
 tags:
-- 工具类
+- WebApiRequest
 sidebar: true
 permalink: '/Tools/Web/HttpRequest'
 isFull: false
