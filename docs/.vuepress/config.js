@@ -41,6 +41,15 @@ module.exports = {
       },
     },
     nav,
+    // sidebar:
+    // {
+    //   "/Tools/Encrypt/":
+    //   [
+    //     "DesEncrypt",
+    //     "MD5Encrypt",
+    //     "RsaEncrypt"
+    //   ]
+    // },
     authorAvatar: "/head.png",
     // 搜索设置
     search: true,

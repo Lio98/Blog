@@ -13,11 +13,15 @@ module.exports = [
     [
       {
         text: "Http请求",
-        link: "/Tools/Web/HttpRequest/"
+        link: "/Tools/HttpRequest/"
       },
       {
         text:"Log4net",
-        link:"/Tools/Log/Log4net/"
+        link:"/Tools/Log4net/"
+      },
+      {
+        text: "加密解密",
+        link: "/Tools/Encrypt/",       
       }
     ]
   },
@@ -35,5 +39,4 @@ module.exports = [
   // },
   //About
   { text: "关于我", link: "/about/", icon: "reco-account" }, 
-  
 ];
