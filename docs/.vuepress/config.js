@@ -18,7 +18,7 @@ module.exports = {
   },
   themeConfig: {
     //首页样式
-    indexTitle:"我们可以一次次的撞南墙，我们不能一个个失去理想。",
+    indexTitle:"我们可以一次次的撞南墙，但我们不能一个个失去理想。",
     indexDes:"We can be frustrated again and again, but we cannot lose our ideals one by one.",
     //是否全屏样式 true，false
     fullscreen: true,
@@ -60,11 +60,11 @@ module.exports = {
         email: "1156743527@qq.com",
         link: "https://www.recoluan.com",
       },
-      {
-        title:'张益达',
-        desc:'',
-        link:'https://zhangyujie.top/'
-      },
+      // {
+      //   title:'张益达',
+      //   desc:'',
+      //   link:'https://zhangyujie.top/'
+      // },
       {
         title:'饭团也有春天',
         desc:'',
