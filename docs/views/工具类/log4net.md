@@ -6,7 +6,7 @@ categories:
 tags:
 - log4net
 sidebar: true
-permalink: '/Tools/Log/Log4net'
+permalink: '/Tools/Log4net'
 isFull: false
 isShowComments: true
 isShowIndex: false

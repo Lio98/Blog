@@ -6,7 +6,7 @@ categories:
 tags:
 - WebApiRequest
 sidebar: true
-permalink: '/Tools/Web/HttpRequest'
+permalink: '/Tools/HttpRequest'
 isFull: false
 isShowComments: true
 isShowIndex: false
