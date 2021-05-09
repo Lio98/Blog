@@ -7,7 +7,7 @@ tags:
 - Encrypt
 sidebar: true
 permalink: '/Tools/Encrypt'
-isFull: true
+isFull: false
 isShowComments: true
 isShowIndex: false
 ---

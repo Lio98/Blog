@@ -22,6 +22,10 @@ module.exports = [
       {
         text: "加密解密",
         link: "/Tools/Encrypt/",       
+      },
+      {
+        text: "验证码",
+        link: "/Tools/VerifyCode/",       
       }
     ]
   },
