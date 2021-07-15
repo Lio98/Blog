@@ -5,7 +5,7 @@ categories:
 - "CentOS"
 tags:
 - 学习笔记
-isFull: true 
+isFull: false 
 sidebar: true
 isShowComments: true
 isShowIndex: true
