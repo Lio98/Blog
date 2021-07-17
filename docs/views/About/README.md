@@ -10,18 +10,6 @@ isShowComment: true
 sidebarDepth: 1
 ---
 
-::: tip
-我们可以一次次的撞南墙，我们不能一个个失去理想。
-
-We can be frustrated again and again, but we cannot lose our ideals one by one.
-:::
-
-<!-- <AutoInput/> -->
-
-<!-- ## 移步新blog
-
-点击[zhangyujie.top](https://zhangyujie.top) -->
-
 ## 个人信息
 
 - 姓名 : 刘涛(男)
