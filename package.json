@@ -25,7 +25,6 @@
     "@vuepress-reco/vuepress-plugin-comments": "1.4.0",
     "@vuepress-reco/vuepress-plugin-loading-page": "1.4.0",
     "@vuepress-reco/vuepress-plugin-pagation": "1.4.0",
-    "container": "^0.0.2",
     "express": "^4.17.1",
     "vue-property-decorator": "8.4.2",
     "vuepress-plugin-helper-live2d": "^1.0.2",
