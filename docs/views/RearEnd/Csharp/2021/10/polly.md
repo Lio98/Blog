@@ -2,9 +2,9 @@
 title: 'polly'
 date: 2021-10-10
 categories:
-- "Csharp"
+- "微服务"
 tags:
-- 微服务
+- Polly
 isFull: false 
 sidebar: true
 isShowComments: true

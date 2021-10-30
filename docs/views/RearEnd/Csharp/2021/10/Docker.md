@@ -1,10 +1,10 @@
 ---
-title: 'Docker'
-date: 2021-10-10
+title: 'Docker安装'
+date: 2021-10-15
 categories:
-- "Docker"
+- "微服务"
 tags:
-- 微服务
+- Docker
 isFull: false 
 sidebar: true
 isShowComments: true
@@ -15,8 +15,7 @@ isShowIndex: true
 
 ### window 安装
 
-**条件**：
-
+条件：
 - window 10
 
 - 开启Hyper-V
@@ -35,31 +34,32 @@ isShowIndex: true
 
 3、 安装docker(默认安装最新版本): sudo yum install docker-ce docker-ce-cli containerd.io
 
-> 如果要安装其他版本
->
-> 要安装特定版本的 Docker Engine-Community，请在存储库中列出可用版本，然后选择并安装：
->
-> - 列出并排序您存储库中可用的版本。此示例按版本号（从高到低）对结果进行排序。
->
->       yum list docker-ce --showduplicates | sort -r
->
->       docker-ce.x86_64  3:18.09.1-3.el7                     docker-ce-stable
->       
->       docker-ce.x86_64  3:18.09.0-3.el7                     docker-ce-stable
->       
->       docker-ce.x86_64  18.06.1.ce-3.el7                    docker-ce-stable
->       
->       docker-ce.x86_64  18.06.0.ce-3.el7                    docker-ce-stable
->
-> - 通过其完整的软件包名称安装特定版本，该软件包名称是软件包名称（docker-ce）加上版本字符串（第二列），从第一个冒号（:）一直到第一个连字符，并用连字符（-）分隔。例如：docker-ce-18.09.1。
+::: tip 安装其他版本
 
->       sudo yum install docker-ce-<VERSION_STRING> docker-ce-cli-<VERSION_STRING> containerd.io
+要安装特定版本的 Docker Engine-Community，请在存储库中列出可用版本，然后选择并安装：
+
+- 列出并排序您存储库中可用的版本。此示例按版本号（从高到低）对结果进行排序。
+
+yum list docker-ce --showduplicates | sort -r
+
+docker-ce.x86_64  3:18.09.1-3.el7                     docker-ce-stable
+
+docker-ce.x86_64  3:18.09.0-3.el7                     docker-ce-stable
+
+docker-ce.x86_64  18.06.1.ce-3.el7                    docker-ce-stable
+
+docker-ce.x86_64  18.06.0.ce-3.el7                    docker-ce-stable
+
+通过其完整的软件包名称安装特定版本，该软件包名称是软件包名称（docker-ce）加上版本字符串（第二列），从第一个冒号（:）一直到第一个连字符，并用连字符（-）分隔。例如：docker-ce-18.09.1。
+
+sudo yum install docker-ce-<VERSION_STRING> docker-ce-cli-<VERSION_STRING> containerd.io -->
+:::
 
 4、启动docker： sudo systemctl start docker
 
 5、运行docker(判断docker是否安装成功)：sudo docker run hello-world
 
-## docker 管理命令介绍
+## Docker 管理命令介绍
 
 |命令                               |功能                                   |
 |:---------------------------------:|:-------------------------------------:|
@@ -80,7 +80,8 @@ isShowIndex: true
 |trust                              |Manage trust on Docker images 管理信任|
 |volume                             |Manage volumes 管理数据挂载(数据持久化 === 永久保存)|
 
-## docker上部署aspnetcore
+
+## Docker上部署aspnetcore
 
 条件
 
@@ -98,13 +99,13 @@ FROM：指定基础镜像（FROM是必备的指令，并且必须为第一条指
 
 RUN: 用来执行命令行命令。其基本格式：
 
-    shell格式： RUN  <命令>  ，输入在bash环境中的命令即可，一个dockerfile允许使用RUN不得超过127层，所以，使用一次RUN， 使用 ‘ \ ’ 换行，使用‘ && ’执行下一条命令。一般使用此种格式；
+	shell格式： RUN  <命令>  ，输入在bash环境中的命令即可，一个dockerfile允许使用RUN不得超过127层，所以，使用一次RUN， 使用 ‘ \ ’ 换行，使用‘ && ’执行下一条命令。一般使用此种格式；
 
-    exec格式： RUN  <"可执行文件", "参数1", "参数2">，此种方式像是函数调用中的格式；
+	exec格式： RUN  <"可执行文件", "参数1", "参数2">，此种方式像是函数调用中的格式；
 
 COPY:  复制文件。 其基本格式：
 
-    格式1：COPY <源路径>...<目标路径>
+	格式1：COPY <源路径>...<目标路径>
 
     格式2：COPY [“<源路径1>”,....."<目标路径>"]
 
@@ -112,13 +113,13 @@ ADD: 更高级的复制文件，在COPY的基础上增加了一些功能，如�
 
 CMD：容器启动命令。其基本格式：
 
-    shell格式： CMD <命令>
+	shell格式： CMD <命令>
 
     exec格式： CMD ["可执行文件", "参数1", "参数2"...]
 
     参数列表格式： CMD [“参数1”, “参数2”...]，在指定了ENTRYPOINT指令后，用CMD指定具体的参数
 
-ENTRYPOINT: 入口点。其基本格式分为exec和shell，ENTRYPOINT的目的和CMD一样，都是在指定容器启动程序及参数。ENTRYPOINT在运行中可以替代，不过比CMD繁琐，需要通过docker run 的参数--entrypoint 来指定。当指定了ENTRYPOINT后，CMD的含义就发生了改变，不在是直接运行其命令，而是将CMD的内容作为参数传递给ENTRYPOINT指令。其执行时就变成了： <ENTRYPOINT> "<CMD>"
+ENTRYPOINT: 入口点。其基本格式分为exec和shell，ENTRYPOINT的目的和CMD一样，都是在指定容器启动程序及参数。ENTRYPOINT在运行中可以替代，不过比CMD繁琐，需要通过docker run 的参数--entrypoint 来指定。当指定了ENTRYPOINT后，CMD的含义就发生了改变，不在是直接运行其命令，而是将CMD的内容作为参数传递给ENTRYPOINT指令。其执行时就变成了： \<ENTRYPOINT\> "\<CMD\>"
 
 ENV： 设置环境变量。（都可以使用这里使用的变量）其基本格式：
 
@@ -250,15 +251,3 @@ HEALTCHECK： 健康检查，判断容器的状态是否正常。 其基本格�
 	或者
 
 	WORKDIR /nginx
-
-## linux中安装Nginx
-
-- 安装 nginx需要工具：yum -y install gcc make pcre-devel zlib-devel tar zlib
-
-- 下载nginx：wget  http://nginx.org/download/nginx-1.15.2.tar.gz
-
-- nginx解压/nginx目录：tar -zxvf  nginx-1.15.2.tar.gz
-
-- 切换到/nginx/nginx-1.15.2：执行./configure，执行make，make install 进行安装
-
-- 切换到/usr/local/nginx/sbin：执行 ./nginx 启动nginx

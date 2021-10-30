@@ -2,9 +2,9 @@
 title: 'Ngnix配置'
 date: 2021-09-18
 categories:
-- "Csharp"
+- "微服务"
 tags:
-- 学习笔记
+- Nginx
 isFull: false 
 sidebar: true
 isShowComments: true
@@ -17,13 +17,24 @@ isShowIndex: true
 
 下面是Nginx安装过程：
 
+- 安装 nginx需要工具：yum -y install gcc make pcre-devel zlib-devel tar zlib
+
+- 下载nginx：wget  http://nginx.org/download/nginx-1.15.2.tar.gz
+
+- nginx解压/nginx目录：tar -zxvf  nginx-1.15.2.tar.gz
+
+- 切换到/nginx/nginx-1.15.2：执行./configure，执行make，make install 进行安装
+
+- 切换到/usr/local/nginx/sbin：执行 ./nginx 启动nginx
+
 ```
-wget http://nginx.org/download/nginx-1.0.14.tar.gz
-tar zxvf nginx-1.0.14.tar.gz
+yum -y install gcc make pcre-devel zlib-devel tar zlib
+wget http://nginx.org/download/nginx-1.15.2.tar.gz
+tar zxvf nginx-1.15.2.tar.gz
 ./configure --with-http_stub_status_module --prefix=/opt/nginx
-cd nginx-1.0.14
-make
-make install
+cd nginx-1.15.2
+make && make install
+./nginx
 ```
 
 其中， –with-http_stub_status_module 可以用来启用 Nginx 的 NginxStatus 功能，以监控 Nginx 的运行状态。
@@ -36,7 +47,7 @@ Nginx的配置文件nginx.conf位于其安装目录的conf目录下。
 
 nginx.conf由多个块组成，最外面的块是main，main包含Events和HTTP，HTTP包含upstream和多个Server，Server又包含多个location：
 
-<image src="../../image/nginxconf.png">
+<img src="../../image/nginxconf.png" />
 
 main（全局设置）、server（主机设置）、upstream（负载均衡服务器设置）和 location（URL匹配特定位置的设置）。
 

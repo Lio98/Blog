@@ -59,17 +59,17 @@ module.exports = {
         desc: "Enjoy when you can, and endure when you must.",
         email: "1156743527@qq.com",
         link: "https://www.recoluan.com",
-      },
+      }
       // {
       //   title:'张益达',
       //   desc:'',
       //   link:'https://zhangyujie.top/'
       // },
-      {
-        title:'饭团也有春天',
-        desc:'',
-        link:'http://www.zpzpup.com/blog/'
-      }
+      // {
+      //   title:'饭团也有春天',
+      //   desc:'',
+      //   link:'http://www.zpzpup.com/blog/'
+      // }
     ],
   },
   plugins: pluginsConf

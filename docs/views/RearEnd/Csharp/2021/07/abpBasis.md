@@ -7,8 +7,8 @@ tags:
 - 学习笔记
 isFull: false 
 sidebar: true
-isShowComments: true
-isShowIndex: true
+isShowComments: false
+isShowIndex: false
 ---
 
 ## 概述
