@@ -87,7 +87,7 @@ function renderLink (h, to, text, active) {
   margin 0 1rem 0 0.6rem
 
 a.sidebar-link
-  font-size 1em
+  font-size 15px
   font-weight 400
   display block!important
   color var(--text-color)
@@ -101,7 +101,7 @@ a.sidebar-link
   &.active
     font-weight 600
     color $accentColor
-    background var(--default-color-8)
+    background #E1F5E7
     border-right 3px solid $accentColor
   .sidebar-group &
     // padding-left 2rem

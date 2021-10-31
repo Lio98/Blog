@@ -1,4 +1,5 @@
 const nav = require("./config/nav");
+const sidebar=require("./config/sidebar")
 const pluginsConf = require('./plugins/index')
 
 module.exports = {
@@ -41,12 +42,13 @@ module.exports = {
       },
     },
     nav,
+    sidebar: sidebar,
     authorAvatar: "/head.png",
     // 搜索设置
     search: true,
     // 自动形成侧边导航
-    sidebar: "auto",
-    sidebarDepth: 3,
+    // sidebar: "auto",
+    // sidebarDepth: 3,
     // 作者
     author: "Lio",
     // 备案号

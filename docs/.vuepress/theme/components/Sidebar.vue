@@ -33,7 +33,7 @@ export default {
     list-style-type none
     &.sidebar-links
       > li
-        background $accentColor
+        // background $accentColor
   a
     display inline-block
   .nav-links

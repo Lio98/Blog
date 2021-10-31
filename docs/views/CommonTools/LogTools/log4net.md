@@ -4,9 +4,8 @@ date: 2021-04-06
 categories:
 - "Csharp"
 tags:
-- log4net
+- 日志配置
 sidebar: true
-permalink: '/Tools/Log4net'
 isFull: false
 isShowComments: true
 isShowIndex: false
