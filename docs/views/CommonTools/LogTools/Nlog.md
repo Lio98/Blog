@@ -11,7 +11,7 @@ isShowComments: true
 isShowIndex: false
 ---
 
-# Nlog使用
+## Nlog使用
 
 首先，当然是引用nuget程序包(NLog.Web.AspNetCore)，然后需要添加Nlog的配置文件,该文件在项目中CfgFiles文件夹下创建nlog.config，并且设置属性如果较新则复制
 
