@@ -5,6 +5,7 @@
       :key="item.path"
       :item="item"
       :currentPage="currentPage"
+      :index="currentPageData.indexOf(item)"
       :currentTag="currentTag" />
   </div>
 </template>

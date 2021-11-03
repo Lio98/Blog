@@ -1,5 +1,5 @@
 ---
-title: 'Consul'
+title: 'Consul使用'
 date: 2021-10-10
 categories:
 - "微服务"
@@ -9,6 +9,8 @@ isFull: false
 sidebar: true
 isShowComments: true
 isShowIndex: true
+isShowDetailImg: true
+DetailImgSrc: "https://lollipop.work/sources/bgImage/1.jpg"
 ---
 
 ## 注册中心
@@ -92,7 +94,7 @@ gossip就是p2p协议。他主要要做的事情是，去中心化。
 2、服务端启动
 
 1.1、 开发模式启动命令：
-```
+``` bash
 consul.exe agent -dev
 ```
 Version ：consul版本
@@ -104,12 +106,14 @@ Client Addr:客户端连接地址，支持http,https,gRPC,DNS。默认我们使�
 Cluster Addr:集群地址，就是Server模式下 启动方式
 Encrypt:安全
 1.2、 生产模式启动命令：
-```
+
+``` bash
 consul agent -server -bootstrap-expect 1  -data-dir d:/consul/data 
 ```
 1.2.1、 会出现错误：
 主要原因：服务端模式启动的时候，默认绑定的地址是0.0.0.0.希望绑定默认的ip地址
-```
+
+``` bash
 consul agent -server -bind=127.0.0.1  -bootstrap-expect  1  -data-dir d:/consul/data 
 ```
 1.3 客户端模式启动
@@ -152,7 +156,7 @@ agent 　　                   Consul的核心命令，主要作用有维护成�
 
 3、然后微服务提供者进行注册，代码如下
 
-```
+``` csharp
 // 1、创建consul客户端连接
 var consulClient = new ConsulClient(configuration =>
 {
@@ -188,7 +192,7 @@ var registration = new AgentServiceRegistration()
 
 4、最后微服务发现者进行获取,服务发现代码如下
 
-```
+``` csharp
 // 1、创建consul客户端连接
 var consulClient = new ConsulClient(configuration =>
 {
@@ -211,7 +215,7 @@ foreach (var service in queryResult.Response)
 
 1、使用AgentServiceCheck来实现，代码配置如下
 
-```
+``` csharp
 new AgentServiceCheck
 {
     // 3.1、consul健康检查超时间

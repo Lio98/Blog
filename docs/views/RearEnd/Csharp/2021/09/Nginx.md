@@ -9,6 +9,7 @@ isFull: false
 sidebar: true
 isShowComments: true
 isShowIndex: true
+isShowDetailImg: true
 ---
 
 ## 1、安装Nginx
@@ -27,7 +28,7 @@ isShowIndex: true
 
 - 切换到/usr/local/nginx/sbin：执行 ./nginx 启动nginx
 
-```
+``` bash
 yum -y install gcc make pcre-devel zlib-devel tar zlib
 wget http://nginx.org/download/nginx-1.15.2.tar.gz
 tar zxvf nginx-1.15.2.tar.gz

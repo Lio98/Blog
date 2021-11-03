@@ -9,6 +9,7 @@ isFull: false
 sidebar: true
 isShowComments: true
 isShowIndex: true
+isShowDetailImg: true
 ---
 
 ## 场景

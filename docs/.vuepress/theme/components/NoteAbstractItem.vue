@@ -1,14 +1,14 @@
 <template>
   <div class="abstract-item center drawline" @click="$router.push(item.path)">
-    <div class="cover-wrap flyl" :style="{ ...bgImageStyle}">
+    <div v-if="this.isShowDetailImg" class="cover-wrap " :class="imageStyle" :style="{ ...bgImageStyle}">
     </div>
-    <div class="abstract-content-wrap flyl" style="margin-left: 5%">
+    <div class="abstract-content-wrap " :class="imageStyle" :style="titleStyle">
       <i v-if="item.frontmatter.sticky" class="iconfont reco-sticky"></i>
       <div class="title">
         <i v-if="item.frontmatter.keys" class="iconfont reco-lock" style="font-size: 60px"></i>
         <router-link :to="item.path">{{item.title}}</router-link>
       </div>
-      <div class="abstract" v-html="item.excerpt"></div>
+      <!-- <div class="abstract" v-html="item.excerpt"></div> -->
       <PageInfo :pageInfo="item" :currentTag="currentTag">
       </PageInfo>
     </div>
@@ -19,10 +19,14 @@
 import PageInfo from './PageInfo'
 export default {
   components: { PageInfo },
-  props: ['item', 'currentPage', 'currentTag'],
+  props: ['item', 'currentPage', 'currentTag','index'],
   data () {
     return {
-      bgUrl: null
+      bgUrl: null,
+      isShowDetailImg: false,
+      DetailImgSrc: "",
+      titleStyle: "",
+      imageStyle:""
     }
   },
   created(){
@@ -32,6 +36,32 @@ export default {
     const bgNum =54
     const inum = this.RandomNum(1,bgNum)
     this.bgUrl = this.timestamp(url + inum + '.jpg');
+    if("isShowDetailImg" in this.item.frontmatter){
+      this.isShowDetailImg=this.item.frontmatter.isShowDetailImg;
+    }
+    if("DetailImgSrc" in this.item.frontmatter){
+      this.DetailImgSrc=this.item.frontmatter.DetailImgSrc;
+    }
+    if(this.isShowDetailImg ){
+      //显示图片，文件没有指定图片地址，则使用随机地址
+      if(this.DetailImgSrc!==null&&this.DetailImgSrc!=="" &&this.DetailImgSrc!==" "){
+        this.bgUrl=this.DetailImgSrc
+      }
+      this.titleStyle="height: 12rem"
+    }
+    // console.log("==========",this.index % 2)
+    if(this.index % 2 === 0)
+    {
+      this.imageStyle="flyl"
+    }
+    else{
+      if(this.isShowDetailImg ){
+        this.imageStyle="flyr"
+      }
+      else{
+        this.imageStyle="flyl"
+      }
+    }
   },
   computed:{
     bgImageStyle () {
@@ -151,14 +181,18 @@ export default {
 .flyl{
   float: left 
 }
+.flyr{
+  float: right 
+}
 .abstract-content-wrap {
   width: 55%;
-  height: 12rem;
+  height: 6rem;
   flex: 1;
   flex-direction: column;
   justify-content: center;
   display: flex;
   transition: all .3s;
+  margin-left: 5%
 }
 .drawline {
   transition: color 0.25s;

@@ -1,5 +1,5 @@
 ---
-title: 'polly'
+title: 'polly使用'
 date: 2021-10-10
 categories:
 - "微服务"
@@ -9,6 +9,7 @@ isFull: false
 sidebar: true
 isShowComments: true
 isShowIndex: true
+isShowDetailImg: true
 ---
 
 # 容错机制
@@ -33,7 +34,7 @@ isShowIndex: true
 
 2、创建FailOverCluster实现类
 
-```c#
+```csharp
 /// <summary>
 /// 故障转移容错机制
 /// </summary>
@@ -102,7 +103,7 @@ public class FailOverCluster : ICluster
 
 3、然后 进入到startup文件中讲将ICluster，FailOverCluster注入到IOC容器,
 
-```c#
+``` csharp
 public void ConfigureServices(IServiceCollection services)
 {
     .....
@@ -132,7 +133,7 @@ Microsoft.Extensions.Http.Polly
 
 2、然后在startup文件中，在services.AddHttpClient()方法上添加
 
-```c#
+```csharp
 services.AddHttpClient("mrico")
         .AddPolicyHandler(Policy<HttpResponseMessage>.Handle<Exception>().CircuitBreakerAsync(3, TimeSpan.FromSeconds(60), (ex, ts) =>
         {
