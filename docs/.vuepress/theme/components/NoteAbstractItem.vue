@@ -61,7 +61,6 @@ export default {
         this.imageStyle="flyl"
       }
     }
-    console.log("==========",this.item)
   },
   computed:{
     bgImageStyle () {

@@ -48,7 +48,7 @@ Nginx的配置文件nginx.conf位于其安装目录的conf目录下。
 
 nginx.conf由多个块组成，最外面的块是main，main包含Events和HTTP，HTTP包含upstream和多个Server，Server又包含多个location：
 
-<img src="../../image/nginxconf.png" />
+![Nginx配置](https://image.xjq.icu/2021/11/16/2021.11.16-nginxconf.png)
 
 main（全局设置）、server（主机设置）、upstream（负载均衡服务器设置）和 location（URL匹配特定位置的设置）。
 
