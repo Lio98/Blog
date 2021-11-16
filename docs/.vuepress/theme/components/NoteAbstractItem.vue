@@ -49,7 +49,6 @@ export default {
       }
       this.titleStyle="height: 12rem"
     }
-    // console.log("==========",this.index % 2)
     if(this.index % 2 === 0)
     {
       this.imageStyle="flyl"
@@ -62,6 +61,7 @@ export default {
         this.imageStyle="flyl"
       }
     }
+    console.log("==========",this.item)
   },
   computed:{
     bgImageStyle () {
@@ -145,7 +145,7 @@ export default {
       height: 2px;
       bottom: 0;
       left: 0;
-      background-color: $accentColor;
+      // background-color: $accentColor;
       visibility: hidden;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
