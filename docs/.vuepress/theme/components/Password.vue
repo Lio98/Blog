@@ -1,7 +1,7 @@
 <template>
-  <div class="password-shadow">
+  <div class="password-shadow" style="height:107%;">
     <ModuleTransition>
-      <h3 v-show="recoShowModule" class="title">{{isPage ? $frontmatter.title : $site.title || $localeConfig.title}}</h3>
+      <h2 v-show="recoShowModule" class="title">{{isPage ? $frontmatter.title : $site.title || $localeConfig.title}}</h2>
     </ModuleTransition>
 
     <ModuleTransition delay="0.08">
@@ -127,7 +127,7 @@ export default {
   background var(--background-color)
   box-sizing border-box
   .title {
-    margin 8rem auto 2rem
+    margin 10rem auto 3rem
     width 100%
     text-align center
     font-size 30px
@@ -154,7 +154,7 @@ export default {
     margin auto
     display block
     max-width:500px;
-    height: 70px;
+    height: 80px;
     background: $accentColor;
     border-radius: $borderRadius
     padding-left 20px
@@ -227,7 +227,7 @@ export default {
     position: absolute;
     left 0
     right 0
-    bottom 10%
+    bottom 5%
     padding: 2.5rem;
     text-align: center;
     color: lighten($textColor, 25%);

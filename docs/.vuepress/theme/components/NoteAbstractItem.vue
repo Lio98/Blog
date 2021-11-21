@@ -5,7 +5,7 @@
     <div class="abstract-content-wrap " :class="imageStyle" :style="titleStyle">
       <i v-if="item.frontmatter.sticky" class="iconfont reco-sticky"></i>
       <div class="title">
-        <i v-if="item.frontmatter.keys" class="iconfont reco-lock" style="font-size: 60px"></i>
+        <i v-if="item.frontmatter.keys" class="iconfont reco-lock" style="font-size: 40px"></i>
         <router-link :to="item.path">{{item.title}}</router-link>
       </div>
       <!-- <div class="abstract" v-html="item.excerpt"></div> -->
