@@ -14,6 +14,7 @@ module.exports = {
         "2021/10/Docker",
         "2021/10/DockerFile配置",
         "2021/10/Docker-Compose",
+        "2021/10/DockerSwarm"
     ],
     "/views/DataBase/":[
         "2021/03/DBDesign",
