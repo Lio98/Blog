@@ -6,7 +6,7 @@ categories:
 tags:
 - 学习笔记
 sidebar: true
-isFull: true
+isFull: false
 isShowComments: true
 isShowIndex: true
 ---
