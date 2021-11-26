@@ -19,5 +19,13 @@ module.exports = {
     "/views/DataBase/":[
         "2021/03/DBDesign",
         "2021/03/DBOptimizing"
+    ],
+    "/views/Kingdee/":[
+        "2021/提单",
+        "2021/05/单据状态",
+        "2021/05/DataTableInfo",
+        "2021/02/插件常用方法",
+        "2021/02/客户端常用方法",
+        "2021/02/服务端常用方法"
     ]
 }
