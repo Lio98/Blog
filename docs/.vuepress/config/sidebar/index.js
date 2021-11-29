@@ -18,7 +18,8 @@ module.exports = {
     ],
     "/views/DataBase/":[
         "2021/03/DBDesign",
-        "2021/03/DBOptimizing"
+        "2021/03/DBOptimizing",
+        "2021/11/NVARCHAR"
     ],
     "/views/Kingdee/":[
         "2021/提单",
