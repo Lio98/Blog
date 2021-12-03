@@ -2,7 +2,7 @@
 title: '【金蝶】 插件开发'
 date: 2020-11-28
 categories:
-- "金蝶"
+- "Kingdee"
 tags:
 - 工作笔记
 sidebar: true

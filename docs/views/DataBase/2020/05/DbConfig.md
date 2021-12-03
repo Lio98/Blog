@@ -2,7 +2,7 @@
 title: '数据库相关配置'
 date: 2020-05-08
 categories:
-- "数据库"
+- "DataBase"
 tags:
 - 学习笔记
 sidebar: true

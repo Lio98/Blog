@@ -2,7 +2,7 @@
 title: '获取下次进入列表的默认过滤方案'
 date: 2021-05-23
 categories:
-- "金蝶"
+- "Kingdee"
 tags:
 - 学习笔记
 sidebar: auto

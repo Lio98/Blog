@@ -2,7 +2,7 @@
 title: '数据库增删查改'
 date: 2020-05-18
 categories:
-- "数据库"
+- "DataBase"
 tags:
 - 学习笔记
 isShowComments: true

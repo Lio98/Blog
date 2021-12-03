@@ -2,7 +2,7 @@
 title: 'DockerFile配置'
 date: 2021-10-16
 categories:
-- "微服务"
+- "Csharp"
 tags:
 - Docker
 isFull: false 

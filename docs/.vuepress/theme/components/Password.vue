@@ -1,7 +1,7 @@
 <template>
   <div class="password-shadow" style="height:107%;">
     <ModuleTransition>
-      <h2 v-show="recoShowModule" class="title">{{isPage ? $frontmatter.title : $site.title || $localeConfig.title}}</h2>
+      <h1 v-show="recoShowModule" class="title">{{isPage ? $frontmatter.title : $site.title || $localeConfig.title}}</h1>
     </ModuleTransition>
 
     <ModuleTransition delay="0.08">
@@ -154,7 +154,7 @@ export default {
     margin auto
     display block
     max-width:500px;
-    height: 80px;
+    height: 70px;
     background: $accentColor;
     border-radius: $borderRadius
     padding-left 20px
@@ -193,29 +193,29 @@ export default {
       height: 100%;
       display: block;
       position: absolute;
-      line-height:70px;
+      line-height:60px;
       top:0;
       left:20px;
       color: #fff;
       cursor: text;
       transition: 0.5s;
       transform-origin: left top;
-      font-size 30px
+      font-size 25px
     }
     button{
       overflow hidden
       width:0px;
-      height:68px;
+      height:70px;
       border-radius: $borderRadius
       position: absolute;
       border 1px solid $accentColor
-      background var(--background-color)
+      background var(--background-color);
       right:1px;
-      top 1px
+      top 0px
       border:0;
       padding:0;
-      color: $accentColor;
-      font-size:18px;
+      color: $accentColor
+      font-size:15px;
       outline:none;
       cursor: pointer;
       opacity:0;

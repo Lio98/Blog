@@ -2,7 +2,7 @@
 title: 'BOS常用方法类库记录'
 date: 2021-11-22
 categories:
-- "金蝶"
+- "Kingdee"
 tags:
 - 学习笔记
 sidebar: auto

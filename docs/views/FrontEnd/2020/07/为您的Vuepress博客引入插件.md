@@ -7,7 +7,7 @@ isShowComment: true
 tags:
 - 'Vuepress'
 categories:
-- '前端'
+- 'Vue'
 ---
 
 ## vuepress-plugin-ribbon

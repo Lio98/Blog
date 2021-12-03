@@ -24,6 +24,7 @@
     "vuepress-theme-reco": "^1.6.6"
   },
   "dependencies": {
+    "vuepress-theme-reco": "^1.6.6",
     "@vuepress-reco/vuepress-plugin-comments": "1.4.0",
     "@vuepress-reco/vuepress-plugin-loading-page": "1.4.0",
     "@vuepress-reco/vuepress-plugin-pagation": "1.4.0",

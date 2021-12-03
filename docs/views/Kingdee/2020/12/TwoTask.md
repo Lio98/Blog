@@ -2,7 +2,7 @@
 title: '【金蝶】 根据单据编号打开单据'
 date: 2020-12-8
 categories:
-- "金蝶"
+- "Kingdee"
 tags:
 - 工作任务
 # 显示侧边栏

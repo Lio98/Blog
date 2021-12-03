@@ -10,23 +10,24 @@ module.exports = {
         "2021/10/防火墙",
         "2021/10/InstallNginx"
     ],
-    "/views/RearEnd/Csharp/":[
-        "2021/10/Docker",
-        "2021/10/DockerFile配置",
-        "2021/10/Docker-Compose",
-        "2021/10/DockerSwarm"
+    "/views/RearEnd/Csharp/SidebarFile/":[
+        "2021/Docker",
+        "2021/DockerFile配置",
+        "2021/Docker-Compose",
+        "2021/DockerSwarm"
     ],
     "/views/DataBase/":[
         "2021/03/DBDesign",
         "2021/03/DBOptimizing",
         "2021/11/NVARCHAR"
     ],
-    "/views/Kingdee/":[
+    "/views/Kingdee/SidebarFile/":[
         "2021/提单",
-        "2021/05/单据状态",
-        "2021/05/DataTableInfo",
-        "2021/02/插件常用方法",
-        "2021/02/客户端常用方法",
-        "2021/02/服务端常用方法"
+        "2021/BOS",
+        "2021/单据状态",
+        "2021/DataTableInfo",
+        "2021/插件常用方法",
+        "2021/客户端常用方法",
+        "2021/服务端常用方法"
     ]
 }

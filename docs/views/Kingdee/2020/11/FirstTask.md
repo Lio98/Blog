@@ -2,7 +2,7 @@
 title: '【金蝶】 物料单据添加已使用检查'
 date: 2020-11-26
 categories:
-- "金蝶"
+- "Kingdee"
 tags:
 - 工作任务
 sidebar: true

@@ -7,7 +7,7 @@ isFull: true
 tags:
 - 'Vue'
 categories:
-- '前端'
+- 'Vue'
 ---
 
 ## 子组件使用this.$emit()向父组件传值

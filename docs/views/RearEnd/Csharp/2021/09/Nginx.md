@@ -2,7 +2,7 @@
 title: 'Ngnix配置'
 date: 2021-09-18
 categories:
-- "微服务"
+- "Csharp"
 tags:
 - Nginx
 isFull: false 

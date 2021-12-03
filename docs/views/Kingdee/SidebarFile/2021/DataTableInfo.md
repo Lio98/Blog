@@ -2,7 +2,7 @@
 title: '常用表名'
 date: 2021-05-23
 categories:
-- "金蝶"
+- "Kingdee"
 tags:
 - 学习笔记
 sidebar: auto

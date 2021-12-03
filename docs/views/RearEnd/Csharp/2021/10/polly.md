@@ -2,7 +2,7 @@
 title: 'polly使用'
 date: 2021-10-10
 categories:
-- "微服务"
+- "Csharp"
 tags:
 - Polly
 isFull: false 

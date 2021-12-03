@@ -7,7 +7,7 @@ isShowComment: true
 tags:
 - 'Vuepress'
 categories:
-- '前端'
+- 'Vue'
 ---
 
 ## config中引入脚本与样式

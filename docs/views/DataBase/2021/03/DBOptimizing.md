@@ -2,7 +2,7 @@
 title: '数据库优化'
 date: 2021-03-03
 categories:
-- "数据库"
+- "DataBase"
 tags:
 - 学习笔记
 sidebar: true

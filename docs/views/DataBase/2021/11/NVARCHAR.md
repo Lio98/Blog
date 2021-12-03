@@ -2,7 +2,7 @@
 title: 'NVARCHAR(N)'
 date: 2021-11-27
 categories:
-- "数据库"
+- "DataBase"
 tags:
 - 学习笔记
 sidebar: true

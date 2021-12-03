@@ -2,7 +2,7 @@
 title: '数据表数据类型'
 date: 2020-05-03
 categories:
-- "数据库"
+- "DataBase"
 tags:
 - 学习笔记
 sidebar: true

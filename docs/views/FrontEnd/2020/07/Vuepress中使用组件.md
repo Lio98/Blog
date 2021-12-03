@@ -15,7 +15,7 @@ sidebar: false
 tags:
 - 'Vuepress'
 categories:
-- '前端'
+- 'Vue'
 ---
 
 

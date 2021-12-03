@@ -2,7 +2,7 @@
 title: 'SqlServer常用函数大全'
 date: 2021-05-10
 categories:
-- "数据库"
+- "DataBase"
 tags:
 - 学习笔记
 sidebar: true

@@ -2,7 +2,7 @@
 title: '【金蝶】 单据体'
 date: 2020-11-22
 categories:
-- "金蝶"
+- "Kingdee"
 tags:
 - 工作笔记
 sidebar: true
