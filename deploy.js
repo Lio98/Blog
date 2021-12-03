@@ -33,7 +33,7 @@ const deploy = require('aliyun-oss-static-deploy')
       ossConfig,
       //  最好同时配置staticPath,ossPath,确定上传文件路径以及存储路径
       staticPath: 'docs/.vuepress/dist', // 默认为根路径
-      ossPath: '', // oss存储路径,默认是根路径,
+      ossPath: 'ltblog', // oss存储路径,默认是根路径,
       recursion: true, // 递归上传,默认为true,文件夹下所有文件递归上传
     })
   })
