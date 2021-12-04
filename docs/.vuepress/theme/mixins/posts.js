@@ -4,8 +4,8 @@ export default {
   computed: {
     //随机背景图片
     $coverRandom (){
-      const num = 54;
-      const url = "https://lollipop.work/sources/bgImage/";
+      const num = 64;
+      const url = "https://lollipop.work/image/";
       const inum = RandomNum(1,num)
       return url + inum + '.jpg';
     },

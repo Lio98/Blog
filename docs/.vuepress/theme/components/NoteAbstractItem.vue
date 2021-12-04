@@ -32,8 +32,8 @@ export default {
   created(){
     //地址 bgUrls
     //个数 bgNum
-    const url = "https://lollipop.work/sources/bgImage/"
-    const bgNum =54
+    const url = "https://lollipop.work/image/"
+    const bgNum =64
     const inum = this.RandomNum(1,bgNum)
     this.bgUrl = this.timestamp(url + inum + '.jpg');
     if("isShowDetailImg" in this.item.frontmatter){
