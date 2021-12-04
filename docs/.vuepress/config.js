@@ -34,11 +34,11 @@ module.exports = {
     blogConfig: {
       category: {
         location: 2, // 在导航栏菜单中所占的位置，默认2
-        text: "博客分类" // 默认 “分类”Category
+        text: "Category" // 默认 “分类”Category
       },
       tag: {
         location: 3, // 在导航栏菜单中所占的位置，默认3
-        text: "标签" // 默认 “标签”Tag
+        text: "Tags" // 默认 “标签”Tag
       },
     },
     nav,

@@ -2,11 +2,11 @@
 
 module.exports = [
   //Home
-  { text: "主页", link: "/", icon: "reco-home" }, 
+  { text: "Home", link: "/", icon: "reco-home" }, 
   //TimeLine
-  { text: "时间轴", link: "/timeline/", icon: "reco-date" }, 
+  { text: "TimeLine", link: "/timeline/", icon: "reco-date" }, 
   {
-    text: "工具类库",
+    text: "Tools",
     icon: "reco-suggestion",
     items:
     [
@@ -29,5 +29,5 @@ module.exports = [
     ]
   },
   //About
-  { text: "关于我", link: "/about/", icon: "reco-account" }
+  { text: "About", link: "/about/", icon: "reco-account" }
 ];
