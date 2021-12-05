@@ -10,11 +10,11 @@ module.exports = {
         "2021/10/防火墙",
         "2021/10/InstallNginx"
     ],
-    "/views/RearEnd/Csharp/SidebarFile/":[
-        "2021/Docker",
-        "2021/DockerFile配置",
-        "2021/Docker-Compose",
-        "2021/DockerSwarm"
+    "/views/RearEnd/Csharp/SidebarFile/2021/Docker/":[
+        "Docker",
+        "DockerFile配置",
+        "Docker-Compose",
+        "DockerSwarm"
     ],
     "/views/DataBase/":[
         "2021/03/DBDesign",

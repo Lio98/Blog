@@ -67,6 +67,10 @@ HttpGzip Static模块和Http Addition模块等。
 
 ### 2.1、Nginx的全局配置
 
+::: tip
+Nginx配置文件参数说明文档地址：https://nginx.org/en/docs/
+:::
+
 代码如下：
 
 ```
@@ -256,12 +260,12 @@ Nginx的负载均衡模块目前支持4种调度算法，下面进行分别介�
 
 ```
 server{
-listen 80;
-server_name 192.168.8.18 cszhi.com;
-index index.html index.htm index.php;
-root /wwwroot/www.cszhi.com
-charset gb2312;
-access_log logs/www.ixdba.net.access.log main;
+    listen 80;
+    server_name 192.168.8.18 cszhi.com;
+    index index.html index.htm index.php;
+    root /wwwroot/www.cszhi.com
+    charset gb2312;
+    access_log logs/www.ixdba.net.access.log main;
 ```
 
 server标志定义虚拟主机开始，listen用于指定虚拟主机的服务端口，server_name用来指定IP地址或者域名，多个域名之间用空格分 开。index用于设定访问的默认首页地址，root指令用于指定虚拟主机的网页根目录，这个目录可以是相对路径，也可以是绝对路径。Charset用于 设置网页的默认编码格式。access_log用来指定此虚拟主机的访问日志存放路径，最后的main用于指定访问日志的输出格式。
