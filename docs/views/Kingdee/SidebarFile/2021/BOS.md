@@ -23,6 +23,8 @@ keys:
 
 - BillViewPlugInProxy.cs 单据View代理插件
 
+- ConvertPlugInProxy.cs 单据转化代理插件 
+
 - EntityRule.cs 实体服务规则类，其中Execute()方法是执行实体服务规则
 
 - DynamicSqlBuilder.cs 构建sql类，其中BuildExtJoinSQLFROM()是拼接join表
@@ -30,6 +32,8 @@ keys:
 ### Kingdee.BOS.App.Core
 
 - ServicePlugInProxy.cs 服务端代理插件
+
+- ExecuteFormBusinessAction 单据转化表单服务策略执行类，原文件名为ConvertFormBusinessAction
 
 ### Kingdee.BOS.Business.Bill
 
