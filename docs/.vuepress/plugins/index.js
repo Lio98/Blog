@@ -1,8 +1,8 @@
 module.exports = {
   "dynamic-title": {
-    showIcon: "https://lio98.gitee.io/sourceimg/favicon.ico",
+    showIcon: "/favicon.ico",
     showText: "Welcome Back！",
-    hideIcon: "https://lio98.gitee.io/sourceimg/favicon.ico",
+    hideIcon: "/favicon.ico",
     hideText: "Wait ...",
     recoverTime: 2000
   },
