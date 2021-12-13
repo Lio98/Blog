@@ -53,6 +53,8 @@ Module：就是对所有组件和业务模块的抽象。取的一个共同的�
 
 ABP可添加插件，并且执行插件的方法
 
+引入Nuget包：Volo.Abp.Core
+
 ``` csharp
 class Program
 {

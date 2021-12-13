@@ -5,7 +5,7 @@ export default {
     //随机背景图片
     $coverRandom (){
       const num = 64;
-      const url = "https://lollipop.work/image/";
+      const url = "https://lio98.gitee.io/sourceimg/";
       const inum = RandomNum(1,num)
       return url + inum + '.jpg';
     },

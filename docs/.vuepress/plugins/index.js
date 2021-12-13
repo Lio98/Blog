@@ -1,8 +1,8 @@
 module.exports = {
   "dynamic-title": {
-    showIcon: "https://lollipop.work/sources/ico/favicon.ico",
+    showIcon: "https://lio98.gitee.io/sourceimg/favicon.ico",
     showText: "Welcome Back！",
-    hideIcon: "https://lollipop.work/sources/ico/favicon.ico",
+    hideIcon: "https://lio98.gitee.io/sourceimg/favicon.ico",
     hideText: "Wait ...",
     recoverTime: 2000
   },
