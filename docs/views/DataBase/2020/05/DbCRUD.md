@@ -211,3 +211,31 @@ isShowIndex: true
 
 然后清空数据库中的所有表：<br>
 如果需要删除存储过程等只需要将上面的做如下修改就行了的**where xtype='U' 改成 where xtype='P'，drop table 改成 drop Procedure**
+
+
+### Select Into
+
+SELECT INTO 语句用于创建表的备份复件或者用于对记录进行存档。从一个表中选取数据，然后把数插入到另一个表中。
+
+```sql
+--把所有的列插入新表
+SELECT * INTO newtablename FROM oldtablename
+
+--把部分列插入新表
+SELECT COLUMN1,COLUMN2 INTO newtablename FROM oldtablename
+
+--IN子句可用于向另一个数据库中拷贝表
+SELECT * INTO Persons IN 'Backup.mdb' FROM Persons
+
+--连表取数据
+SELECT Persons.LastName,Orders.OrderNo INTO Persons_Order_Backup FROM Persons
+INNER JOIN Orders
+ON Persons.Id_P=Orders.Id_P
+```
+
+### Insert Into
+
+```sql
+INSERT INTO tr_user (sname, sage) SELECT name AS sname,age AS sage 
+FROM USER 
+```
