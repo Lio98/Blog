@@ -10,7 +10,7 @@ module.exports = {
         "2021/10/防火墙",
         "2021/10/InstallNginx"
     ],
-    "/views/RearEnd/Csharp/SidebarFile/2021/Docker/":[
+    "/views/RearEnd/Csharp/SidebarFile/Docker/":[
         "Docker",
         "DockerFile配置",
         "Docker-Compose",
@@ -29,5 +29,9 @@ module.exports = {
         "2021/插件常用方法",
         "2021/客户端常用方法",
         "2021/服务端常用方法"
+    ],
+    "/views/RearEnd/Csharp/SidebarFile/Performance/":[
+        "Performance-optimization",
+        "webApiPerformance"
     ]
 }

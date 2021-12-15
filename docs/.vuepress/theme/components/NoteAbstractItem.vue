@@ -32,7 +32,7 @@ export default {
   created(){
     //地址 bgUrls
     //个数 bgNum
-    const url = "https://lollipop.work/image/"
+    const url = "https://lio98.gitee.io/sourceimg/"
     const bgNum =64
     const inum = this.RandomNum(1,bgNum)
     this.bgUrl = this.timestamp(url + inum + '.jpg');
