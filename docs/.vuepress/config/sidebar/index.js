@@ -33,6 +33,7 @@ module.exports = {
     "/views/RearEnd/Csharp/SidebarFile/Performance/":[
         "Performance-optimization",
         "webApiPerformance",
-        "MysqlPerformance"
+        "MysqlPerformance_one",
+        "MysqlPerformance_two"
     ]
 }

@@ -1,5 +1,5 @@
 ---
-title: 'Mysql优化'
+title: 'Mysql优化(一)'
 date: 2021-12-19
 categories:
 - "DataBase"
