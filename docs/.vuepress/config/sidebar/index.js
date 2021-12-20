@@ -22,7 +22,7 @@ module.exports = {
         "2021/11/NVARCHAR"
     ],
     "/views/Kingdee/SidebarFile/":[
-        "2021/提单",
+        "2021/提单2021",
         "2021/BOS",
         "2021/单据状态",
         "2021/DataTableInfo",
