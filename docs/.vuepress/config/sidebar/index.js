@@ -16,10 +16,13 @@ module.exports = {
         "Docker-Compose",
         "DockerSwarm"
     ],
-    "/views/DataBase/":[
-        "2021/03/DBDesign",
-        "2021/03/DBOptimizing",
-        "2021/11/NVARCHAR"
+    "/views/DataBase/SidebarFile/":[
+        "DBDesign",
+        "DBOptimizing",
+        "NVARCHAR",
+        "DbCRUD",
+        "DbDataType",
+        "DbAboutTime"
     ],
     "/views/Kingdee/SidebarFile/":[
         "2021/提单2021",

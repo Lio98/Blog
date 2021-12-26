@@ -13,6 +13,8 @@ isShowIndex: true
 
  ### 1、offset/fetch next
 
+[引用](https://blog.csdn.net/weixin_37610397/article/details/80892426)
+
  ```sql
  SELECT B.* FROM 
      (SELECT WR.WONO,WR.WORKORDER,WR.COMPONENT,WR.MATERIALCODE,WR.PRODUCT,WR.SPEC,
@@ -45,13 +47,10 @@ isShowIndex: true
       order by sNo desc ) temp_order
       order by sNo asc;
  ```
- <span style="float:left;color:red;font-size:20px">offset A rows,将前A条记录舍去，fetch next B rows only,向后在读取B条数据</span>
- <br>
- <br>
- <br>
- <span style="float:right;color:blue;font-size:12px">引用：https://blog.csdn.net/weixin_37610397/article/details/80892426</span>
- <br>
- <br>
+<span style="float:left;color:red;font-size:20px">offset A rows,将前A条记录舍去，fetch next B rows only,向后在读取B条数据</span>
+
+<br>
+<br>
 
 ## Oracle 分页查询
 
@@ -92,6 +91,8 @@ isShowIndex: true
 
 ## Oracle查锁表以及解锁
 
+[引用](https://www.cnblogs.com/chinas/p/8253451.html)
+
  - 使用如下语句可以查出锁表的具体原因,这个语句将查找到数据库中所有的DML语句产生的锁，还可以发现，任何DML语句其实产生了两个锁，一个是表锁，一个是行锁。
     
     ```sql
@@ -106,13 +107,13 @@ isShowIndex: true
     ```sql
      ALTER SYSTEM KILL SESSION'210,11562';
      ```
-<br>
-<span style="float:right;font-size:12px;color:blue">引用：https://www.cnblogs.com/chinas/p/8253451.html</span>
-<br>
+
+
+
 
 ## Oracle恢复删除的数据
 
-**分为两种方法：scn和时间戳两种方式恢复**
+**分为两种方法：scn和时间戳两种方式恢复** [引用](https://www.cnblogs.com/kangxuebin/archive/2013/05/29/3106183.html)
 
  ### 1、 通过scn恢复
 
@@ -135,6 +136,7 @@ isShowIndex: true
 
  ### 2、 通过时间恢复
 
+
   - 查询当前系统时间
      ```sql
      select to_char(sysdate,'yyyy-mm-dd hh24:mi:ss') from dual;
@@ -152,9 +154,8 @@ isShowIndex: true
      注意：如果在执行上面的语句，出现错误。可以尝试执行 alter table 表名 enable row movement; //允许更改时间戳
      ```
 
-<br>
-<span style="float:right;font-size:12px;color:blue">引用：https://www.cnblogs.com/kangxuebin/archive/2013/05/29/3106183.html</span>
-<br>
+
+
 
 ## 索引
  ### 1、创建索引
@@ -177,7 +178,7 @@ isShowIndex: true
     select* from all_ind_columns where table_name = 'tablename';
 
    <br>
-   <span style="float:right;color:blue;font-size:12px">引用: https://www.cnblogs.com/superming/p/10978639.html</span> 
+[引用](https://www.cnblogs.com/superming/p/10978639.html)
 
 ## 删除所有数据表
 
