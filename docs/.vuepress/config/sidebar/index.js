@@ -37,6 +37,7 @@ module.exports = {
         "Performance-optimization",
         "webApiPerformance",
         "MysqlPerformance_one",
-        "MysqlPerformance_two"
+        "MysqlPerformance_two",
+        "MysqlPerformance_three"
     ]
 }
