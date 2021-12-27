@@ -29,6 +29,8 @@ keys:
 
 - DynamicSqlBuilder.cs 构建sql类，其中BuildExtJoinSQLFROM()是拼接join表
 
+- AbstractDynamicFormModel.cs 动态表单数据模型，其中SetValue()更改字段值，SummaryDataAndFill()表体字段汇总到指定表头字段/子单据体汇总到指定父分录字段
+
 ### Kingdee.BOS.App.Core
 
 - ServicePlugInProxy.cs 服务端代理插件
@@ -41,6 +43,8 @@ keys:
 ### Kingdee.BOS.Business.Bill
 
 - EntityExport.cs 单据体引出
+
+- AbstractEntryOperation.cs 单据体操作，此文件中包含NewEntry新增分录，ModifyEntry修改分录，BatchInsertEntry批量插入分录，InsertEntry插入分录，CopyEntryRow复制分录行，DeleteEntry删除分录行，BatchFill批量填充
 
 ### Kingdee.BOS.DataEntity
 
