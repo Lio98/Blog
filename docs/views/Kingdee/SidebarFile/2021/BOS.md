@@ -39,10 +39,14 @@ keys:
 
 - ExecuteFormBusinessAction 单据转化表单服务策略执行类，原文件名为ConvertFormBusinessAction
 
+- AbstractOprerationService.cs 操作服务类，DoExcete()是操作真正执行的过程
+
 
 ### Kingdee.BOS.Business.Bill
 
 - EntityExport.cs 单据体引出
+
+- ImportData.cs 引入
 
 - AbstractEntryOperation.cs 单据体操作，此文件中包含NewEntry新增分录，ModifyEntry修改分录，BatchInsertEntry批量插入分录，InsertEntry插入分录，CopyEntryRow复制分录行，DeleteEntry删除分录行，BatchFill批量填充
 
