@@ -25,6 +25,7 @@ module.exports = {
         "DbAboutTime"
     ],
     "/views/Kingdee/SidebarFile/":[
+        "2022/提单2022",
         "2021/提单2021",
         "2021/BOS",
         "2021/单据状态",
