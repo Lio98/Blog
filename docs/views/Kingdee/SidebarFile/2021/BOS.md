@@ -56,6 +56,10 @@ keys:
 
 ## WebApi
 
+### url格式
+
+- http://ServerIp/K3Cloud/接口命名空间.接口实现类名.方法,组件名.common.kdsvc
+
 ### Kingdee.BOS.WebApi.ServicesStub
 
 - DynamicFormService.cs WebApi接口到Form之间连接

@@ -52,3 +52,11 @@ keys:
 - 网控操作表：T_BAS_NETWORKCTRLOBJECT
 
 - 角色表：T_SEC_ROLE
+
+- 用户表：T_SEC_USER
+
+- 过滤方案表：T_BAS_FILTERSCHEME
+
+- 上机操作日志：T_BAS_OPERATELOG
+
+- 上机操作日志归档表：T_BAS_OPERATELOGBK
