@@ -25,6 +25,10 @@ module.exports = [
       {
         text: "验证码",
         link: "/Tools/VerifyCode/",       
+      },
+      {
+        text:"Git命令",
+        link:"/Tools/gitCommon/"
       }
     ]
   },

@@ -4,11 +4,11 @@ module.exports = {
         "Serilog",
         "Nlog"
     ],
-    "/views/CentOS/":[
-        "2021/06/LinuxOrder",
-        "2021/06/SetStaticIP",
-        "2021/10/防火墙",
-        "2021/10/InstallNginx"
+    "/views/CentOS/2021/":[
+        "06/LinuxOrder",
+        "06/SetStaticIP",
+        "10/防火墙",
+        "10/InstallNginx"
     ],
     "/views/RearEnd/Csharp/SidebarFile/Docker/":[
         "Docker",
