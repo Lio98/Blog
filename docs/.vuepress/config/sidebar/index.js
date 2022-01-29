@@ -32,7 +32,8 @@ module.exports = {
         "2021/DataTableInfo",
         "2021/插件常用方法",
         "2021/客户端常用方法",
-        "2021/服务端常用方法"
+        "2021/服务端常用方法",
+        "2022/PPBOM"
     ],
     "/views/RearEnd/Csharp/SidebarFile/Performance/":[
         "Performance-optimization",
