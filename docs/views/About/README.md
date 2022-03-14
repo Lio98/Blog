@@ -36,7 +36,7 @@ sidebarDepth: 1
 
 - 掌握理解23种设计模式中常用设计模式;
 
-- 熟练使用 visualstudio，bitbucket，postman 等开发工具;
+- 熟练使用 visualstudio，git，svn 等开发工具;
 
 - 熟练帆软报表开发;
 
