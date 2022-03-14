@@ -1,6 +1,6 @@
 ---
 title: '个人简历'
-date: 2020-12-01
+date: 2022-02-13
 # 永久链接
 permalink: '/about'
 isTimeLine: false
@@ -16,9 +16,9 @@ sidebarDepth: 1
 
 - 统招本科 / 南华大学 / 物联网工程
 
-- 工作经验 : 2 年
+- 工作经验 : 3 年
 
-- 年龄 : 23
+- 年龄 : 24
 
 - 手机/微信 : 15378886707
 
@@ -38,7 +38,7 @@ sidebarDepth: 1
 
 - 熟练使用 visualstudio，bitbucket，postman 等开发工具;
 
-- 熟练FineReport报表开发;
+- 熟练帆软报表开发;
 
 - CET-4。
 
@@ -52,7 +52,9 @@ sidebarDepth: 1
 
     1. 金蝶云星空制造领域功能开发及维护；
 
-    2. 负责制造报表、看板的开发。
+    2. 客户提单问题处理；
+
+    3. 负责制造报表、看板的开发。
 
   **深圳市赢合科技股份有限公司&nbsp;&nbsp;&nbsp;&nbsp;(软件开发工程师)&nbsp;&nbsp;&nbsp;&nbsp;(2019.3-2020.11)**
 

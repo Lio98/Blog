@@ -2,7 +2,7 @@
 title: 'acme.sh申请Let’s Encrypt免费的SSL证书'
 date: 2022-01-27
 categories:
-- "CentOs"
+- "CentOS"
 tags:
 - 学习笔记
 sidebar: true
