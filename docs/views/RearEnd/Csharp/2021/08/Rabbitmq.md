@@ -14,7 +14,7 @@ isShowDetailImg: true
 
 ## 场景
 
-RabbitMQ需要依赖于otp_win64，所以安装RabbitMQ之前需要安装otp_win64,下载地址：https://www.erlang.org/downloads 
+RabbitMQ需要依赖于otp_win64，所以安装RabbitMQ之前需要安装otp_win64,[下载地址](https://www.erlang.org/downloads) 
 
 在学习RabbitMQ的时候,所以在配置RabbitMQ时出现了问题(中间陆陆续续也出现过Erlang与RabbitMQ版本的不对应而导致的问题）
 

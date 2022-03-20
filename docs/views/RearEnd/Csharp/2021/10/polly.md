@@ -4,7 +4,7 @@ date: 2021-10-10
 categories:
 - "Csharp"
 tags:
-- Polly
+- MicroService
 isFull: false 
 sidebar: true
 isShowComments: true
