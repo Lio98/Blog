@@ -240,3 +240,23 @@ ON Persons.Id_P=Orders.Id_P
 INSERT INTO tr_user (sname, sage) SELECT name AS sname,age AS sage 
 FROM USER 
 ```
+
+### 连表更新
+
+```sql
+update a set a.F_ORA_PICTURE =b.FIMAGEFILESERVER  
+from t_eng_bomchild a inner join t_bd_material b on a.fmaterialid=b.fmaterialid 
+and (a.F_ORA_PICTURE='' or a.F_ORA_PICTURE= ' ' or a.F_ORA_PICTURE=null) 
+and(b.FIMAGEFILESERVER!='' and b.FIMAGEFILESERVER!='' and b.FIMAGEFILESERVER is not null);
+```
+
+### Merge Into
+
+```sql
+MERGE INTO 
+T_ENG_BOMCHILD T1 
+USING(SELECT FMATERIALID,FIMAGEFILESERVER FROM T_BD_MATERIAL) T2 
+ON (T1.FMATERIALID = T2.FMATERIALID AND (T1.F_ORA_PICTURE='' or T1.F_ORA_PICTURE= ' ' or T1.F_ORA_PICTURE=null) 
+AND (T2.FIMAGEFILESERVER!='' and T2.FIMAGEFILESERVER!='' and T2.FIMAGEFILESERVER is not null)) 
+WHEN MATCHED THEN UPDATE SET T1.F_ORA_PICTURE=T2.FIMAGEFILESERVER;
+```
