@@ -61,3 +61,17 @@ ps -ef | grep nginx
 
 pkill nginx  #删除nginx进程
 ```
+
+
+## windows下启用nginx
+
+在windows下启动nginx报错80端口被占用，通过命令查看被哪个进程占用
+
+```bash
+netstat -navo|find /i "listen"|find /i ":80"
+```
+
+发现是system占用，右键属性看详情是ntoskrnl.exe，在服务里找到对应的服务停止掉它
+
+![](https://image.xjq.icu/2022/4/4/1649041583574_pid.jpg)
+![](https://image.xjq.icu/2022/4/4/1649041592333_worldwideweb.jpg)
