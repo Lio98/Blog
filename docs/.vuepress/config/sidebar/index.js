@@ -22,7 +22,8 @@ module.exports = {
         "NVARCHAR",
         "DbCRUD",
         "DbDataType",
-        "DbAboutTime"
+        "DbAboutTime",
+        "MySQLInstall"
     ],
     "/views/Kingdee/SidebarFile/":[
         "2022/提单2022",
