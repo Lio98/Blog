@@ -23,7 +23,8 @@ module.exports = {
         "DbCRUD",
         "DbDataType",
         "DbAboutTime",
-        "MySQLInstall"
+        "MySQLInstall",
+        "MySQLMasterSlave"
     ],
     "/views/Kingdee/SidebarFile/":[
         "2022/提单2022",
