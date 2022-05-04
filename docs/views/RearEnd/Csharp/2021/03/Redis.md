@@ -11,8 +11,7 @@ isShowComments: true
 isShowIndex: true
 ---
 
-## Redis
-
+## Redis下载安装
 
 ### 下载(Windows版)
 
@@ -71,7 +70,7 @@ Redis：Remote Dictionary Server ---- 远程字典服务器
 
 - Redis的操作都是原子性的，不用考虑并发的问题
 
-### Redis 5种数据结构
+## Redis数据结构
 
 - String：Key - Value结构的缓存，Value不超过512M
 
@@ -92,3 +91,123 @@ Redis：Remote Dictionary Server ---- 远程字典服务器
    - 生产消费模式：一个数据源只能由一个接收者
 
    - 订阅发布模式：一个数据源，多个接受者
+
+## Redis分布式锁
+
+```csharp
+public class RedisLock
+{
+    // 1、redis连接管理类
+    private ConnectionMultiplexer connectionMultiplexer = null;
+
+    // 2、redis数据操作类
+    private IDatabase database = null;
+    public RedisLock()
+    {
+        connectionMultiplexer = ConnectionMultiplexer.Connect("192.168.44.4:6379");
+
+        database = connectionMultiplexer.GetDatabase(0);
+    }
+
+    /// <summary>
+    /// 加锁
+    /// 1、key:锁名称
+    /// 2、value:谁加的这把锁。线程1
+    /// 3、exprie：过期时间：目的是为了防止死锁
+    /// </summary>
+    public void Lock()
+    {
+        while (true)
+        {
+            bool flag = database.LockTake("redis-lock", Thread.CurrentThread.ManagedThreadId, TimeSpan.FromSeconds(60));
+            // 1、true 加锁成功 2、false 加锁失败
+            if (flag)
+            {
+                break;
+            }
+            // 防止死循环。通过等待时间，释放资源
+            Thread.Sleep(10);
+        }
+    }
+
+    /// <summary>
+    /// 解锁
+    /// </summary>
+    public void UnLock()
+    {
+        bool flag = database.LockRelease("redis-lock", Thread.CurrentThread.ManagedThreadId);
+
+        // true:释放成功  false 释放失败
+        // 方案：释放资源
+        connectionMultiplexer.Close();
+    }
+}
+```
+
+## Redis-cluster集群
+
+redis-cluster架构说明
+
+- 6个redis实例。redis-cluster运行需要的角色实例
+
+- redis-trib.rb。分配redis主从角色
+
+### 部署
+
+总体需要用到的文件结构
+![](https://image.xjq.icu/2022/5/4/1651675852702_redis.jpg)
+
+- 在redis文件夹中创建6个配置文件，添加如下内容
+
+   ```conf
+   port 6380
+   bind 127.0.0.1        
+   appendonly yes
+   appendfilename "appendonly.6380.aof"   
+   cluster-enabled yes                                    
+   cluster-config-file nodes.6380.conf
+   cluster-node-timeout 15000
+   cluster-slave-validity-factor 10
+   cluster-migration-barrier 1
+   cluster-require-full-coverage yes
+   ```
+![](https://image.xjq.icu/2022/5/4/1651675215343_redis-conf.jpg)
+
+- 启动6个redis实例：逐一如下命令，需要修改配置文件名
+
+   ```bash
+   redis-server.exe redis.6380.conf
+   ```
+
+- redis-cluster 主从角色分配
+
+   1. ruby 安装。[下载地址](https://rubyinstaller.org/downloads/)，下载exe文件后进行安装。
+
+   2. redis-3.2.2.gem 下载。[下载地址](https://rubygems.org/gems/redis)，下载后进入ruby的安装目录bin文件夹下，通过gem命令文件安装
+
+      ```bash
+      gem install –local D:\Codes\Csharp\Net_Architecture\LT.Business\Redis-cluster\redis-4.6.0.gem
+      ```
+      ![](https://image.xjq.icu/2022/5/4/1651675329098_gem.jpg)
+
+   3. redis-trib.rb 下载。[下载地址](https://github.com/beebol/redis-trib.rb)，进入到redis-trib.rb目录下，通过cmd使用redis-trib.rb
+
+   4. redis-trib.rb 搭建redis集群主从
+
+      ![](https://image.xjq.icu/2022/5/4/1651675573461_redis-trib-options.jpg)
+
+      ```bash
+      ruby redis-trib.rb create --replicas 1 127.0.0.1:6380 127.0.0.1:6381 127.0.0.1:6382 127.0.0.1:6383 127.0.0.1:6384 127.0.0.1:6385
+      ```
+      ![](https://image.xjq.icu/2022/5/4/1651675497871_redis-trib.jpg)
+
+   5. redis-cluster 集群状态检查
+
+      ```bash
+      ruby redis-trib.rb check 127.0.0.1:6380
+      ```
+      ![](https://image.xjq.icu/2022/5/4/1651675419991_redis-trib-check.jpg)
+
+
+
+
