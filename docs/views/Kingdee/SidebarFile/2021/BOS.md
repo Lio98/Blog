@@ -56,7 +56,7 @@ keys:
 
 ## WebApi
 
-### url格式
+### WebAPI url格式
 
 - http://ServerIp/K3Cloud/接口命名空间.接口实现类名.方法,组件名.common.kdsvc
 
