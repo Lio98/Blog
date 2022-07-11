@@ -41,6 +41,8 @@ keys:
 
 - AbstractOprerationService.cs 操作服务类，DoExcete()是操作真正执行的过程
 
+- BusinessFlowWriteBack.cs 反写规则实现类， DoWriteBakc()是实现入口
+
 
 ### Kingdee.BOS.Business.Bill
 
@@ -67,3 +69,6 @@ keys:
 ### Kingdee.BOS.WebApi.Client
 
 - K3CloudApiClient.cs  使用Kingdee.BOS.WebApi.Client程序集调用WebApi入口
+
+
+
