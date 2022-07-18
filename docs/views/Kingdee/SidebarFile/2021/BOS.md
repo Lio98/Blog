@@ -43,7 +43,7 @@ keys:
 
 - BusinessFlowWriteBack.cs 反写规则实现类， DoWriteBakc()是实现入口
 
-
+- MetadataXmlReader.cs 获取元数据Metadata，Load()是实现入口
 ### Kingdee.BOS.Business.Bill
 
 - EntityExport.cs 单据体引出
