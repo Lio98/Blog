@@ -31,6 +31,10 @@ keys:
 
 - AbstractDynamicFormModel.cs 动态表单数据模型，其中SetValue()更改字段值，SummaryDataAndFill()表体字段汇总到指定表头字段/子单据体汇总到指定父分录字段
 
+### Kingdee.BOS.App
+
+- 获取数据库连接字符串 Kingdee.BOS.App.Data.KDatabaseFactory.GetConnectionString()
+
 ### Kingdee.BOS.App.Core
 
 - ServicePlugInProxy.cs 服务端代理插件
