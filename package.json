@@ -20,14 +20,12 @@
     "vuepress-plugin-meting": "^0.1.1",
     "vuepress-plugin-ribbon-animation": "^1.1.3",
     "vuepress-plugin-sakura": "^1.1.0",
-    "vuepress-theme-reco": "^1.6.6",
-    "aliyun-oss-static-deploy": "^1.0.3"
+    "vuepress-theme-reco": "^1.6.6"
   },
   "dependencies": {
     "@vuepress-reco/vuepress-plugin-comments": "^1.6.13",
     "@vuepress-reco/vuepress-plugin-loading-page": "1.4.0",
     "@vuepress-reco/vuepress-plugin-pagation": "1.4.0",
-    "aliyun-oss-static-deploy": "^1.0.3",
     "container": "^0.0.2",
     "express": "^4.17.1",
     "vue-property-decorator": "8.4.2",
