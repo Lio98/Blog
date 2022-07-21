@@ -12,21 +12,21 @@ module.exports = {
       content: "复制成功!"
     }
   },
-  'meting': {
-    // auto: "https://y.qq.com/n/m/detail/taoge/index.html?id=7653249637",
-    auto: "https://y.qq.com/n/yqq/playlist/1906732760.html#stat=y_new.profile.create_playlist.love.click&dirid=201",
-    meting: {
-      server: "tencent",
-      type: "playlist",
-      mid: "1906732760",
-    }, // 不配置该项的话不会出现全局播放器
-    aplayer: {
-      autoplay: true,
-      // 设置 lrc 歌词解析模式 （0：禁用 lrc 歌词，1：lrc 格式的字符串，3：lrc 文件 url）
-      lrcType: 0,
-      // autoplay: true
-    }
-  },
+  // 'meting': {
+  //   // auto: "https://y.qq.com/n/m/detail/taoge/index.html?id=7653249637",
+  //   auto: "https://y.qq.com/n/yqq/playlist/1906732760.html#stat=y_new.profile.create_playlist.love.click&dirid=201",
+  //   meting: {
+  //     server: "tencent",
+  //     type: "playlist",
+  //     mid: "1906732760",
+  //   }, // 不配置该项的话不会出现全局播放器
+  //   aplayer: {
+  //     autoplay: true,
+  //     // 设置 lrc 歌词解析模式 （0：禁用 lrc 歌词，1：lrc 格式的字符串，3：lrc 文件 url）
+  //     lrcType: 0,
+  //     // autoplay: true
+  //   }
+  // },
   'vuepress-plugin-helper-live2d': {
     // 是否开启控制台日志打印(default: false)
     log: false,
