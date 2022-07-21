@@ -36,10 +36,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install Packages
-        run: yarn install
+        run: yarn
 
       - name: Build
-        run: yarn run build
+        run: yarn build
 
       - name: Deploy to Server # 第二步，rsync推文件
         uses: AEnterprise/rsync-deploy@v1.0 # 使用别人包装好的步骤镜像
