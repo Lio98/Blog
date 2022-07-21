@@ -9274,13 +9274,6 @@ vuepress-plugin-mailchimp@^1.4.1:
     jsonp "^0.2.1"
     query-string "^6.9.0"
 
-vuepress-plugin-meting@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry-npm.myscrm.cn/repository/pkg/vuepress-plugin-meting/-/vuepress-plugin-meting-0.1.1.tgz#1a407ef9ed0f9c5f19bf2ad5edc6bc56ad7f59d0"
-  integrity sha512-mx49a0jYRpVbY2guHbA29ZiQ051+PmiQ5uEKXa4NAJE3rXhr2sJFx757eT2zK1Jyjr8DLVJp1wRk5zhLa35eIQ==
-  dependencies:
-    "@moefe/vue-aplayer" "^2.0.0-beta.5"
-
 vuepress-plugin-ribbon-animation@^1.1.3:
   version "1.1.3"
   resolved "https://registry-npm.myscrm.cn/repository/pkg/vuepress-plugin-ribbon-animation/-/vuepress-plugin-ribbon-animation-1.1.3.tgz#15dd84e0fe9bbff805ab8e05df7f50bcc774b5b6"
