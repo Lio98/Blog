@@ -6,12 +6,12 @@ module.exports = {
     hideText: "Wait ...",
     recoverTime: 2000
   },
-  "vuepress-plugin-nuggets-style-copy": {
-    copyText: "复制",
-    tip: {
-      content: "复制成功!"
-    }
-  },
+  // "vuepress-plugin-nuggets-style-copy": {
+  //   copyText: "复制",
+  //   tip: {
+  //     content: "复制成功!"
+  //   }
+  // },
   // 'meting': {
   //   // auto: "https://y.qq.com/n/m/detail/taoge/index.html?id=7653249637",
   //   auto: "https://y.qq.com/n/yqq/playlist/1906732760.html#stat=y_new.profile.create_playlist.love.click&dirid=201",
@@ -94,6 +94,6 @@ module.exports = {
     },
     ribbonShow: false, //  点击彩带  true显示  false为不显示
     ribbonAnimationShow: true  // 滑动彩带
-  },
-  "vueperss-plugin-auto-sidebar": {}
+  }
+  // "vueperss-plugin-auto-sidebar": {}
 }
