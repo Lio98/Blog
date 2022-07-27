@@ -29,7 +29,6 @@ module.exports = {
   // },
   'vuepress-plugin-code-copy':{
     color:"#8A7F7D",
-    align: "top",
     successText: "复制成功!"
   },
   'vuepress-plugin-helper-live2d': {
