@@ -1,5 +1,5 @@
 ---
-title: 'SqlServer查询历史死锁记录'
+title: 'SqlServer查询历史死锁/阻塞记录'
 date: 2022-07-06
 categories:
 - "DataBase"
@@ -15,6 +15,8 @@ isShowDetailImg: true
 ::: tip
 最近工作遇到要查数据库历史死锁的sql语句，苦于之前没用过，不懂如何去查，翻阅网上终于找到相关语句
 :::
+
+## 死锁
 
 ```sql
 DECLARE @SessionName SysName 
@@ -126,4 +128,41 @@ where t1.lock_owner_address = t2.resource_address;
 SELECT request_session_id spid,OBJECT_NAME(resource_associated_entity_id)tableName
 FROM  sys.dm_tran_locks
 WHERE resource_type='OBJECT ' ;
+```
+
+## 阻塞
+
+```sql
+-- 查询阻塞情况
+-- 查询结果需要截图，text字段的值要另外复制下做记录保存。
+SELECT
+    t1.resource_type AS [锁类型],
+    DB_NAME(resource_database_id) AS [数据库名],
+    t1.resource_associated_entity_id AS [阻塞资源对象],
+    t1.resource_description AS [资源描述信息],
+    t1.request_mode AS [请求的锁],
+    t1.request_session_id AS [等待会话],
+    t2.wait_duration_ms AS [等待时间],
+    (SELECT [text] FROM sys.dm_exec_requests AS r 
+    WITH (NOLOCK) CROSS APPLY sys.dm_exec_sql_text(r.[sql_handle])    
+    WHERE r.session_id = t1.request_session_id) AS [等待会话执行的批SQL],
+    (SELECT SUBSTRING(qt.[text],r.statement_start_offset/2, 
+    (CASE WHEN r.statement_end_offset = -1 
+    THEN LEN(CONVERT(NVARCHAR(max), qt.[text])) * 2 
+    ELSE r.statement_end_offset END )/2) FROM sys.dm_exec_requests AS r 
+    WITH (NOLOCK) CROSS APPLY sys.dm_exec_sql_text(r.[sql_handle]) AS qt   
+    WHERE r.session_id = t1.request_session_id) AS [等待会话执行的SQL],
+    t2.blocking_session_id AS [阻塞会话],
+    (SELECT [text] FROM sys.sysprocesses AS p CROSS APPLY sys.dm_exec_sql_text(p.[sql_handle]) 
+    WHERE p.spid = t2.blocking_session_id) AS [阻塞会话执行的批SQL]
+    FROM
+    sys.dm_tran_locks AS t1 WITH (NOLOCK) 
+    INNER JOIN sys.dm_os_waiting_tasks AS t2 WITH (NOLOCK) ON t1.lock_owner_address = t2.resource_address
+OPTION (RECOMPILE);
+
+
+-- 查询阻塞
+Select spid,blocked from master..sysprocesses where blocked<>0
+-- 查询spid对应的SQL
+dbcc inputbuffer(spid)
 ```
