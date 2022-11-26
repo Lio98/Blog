@@ -9,6 +9,7 @@ sidebar: true
 isFull: false
 isShowComments: true
 isShowIndex: true
+isShowDetailImg: true
 ---
 
 ## Sql Service

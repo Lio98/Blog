@@ -34,7 +34,11 @@ export default {
     //个数 bgNum
     const url = "https://lio98.gitee.io/sourceimg/"
     const bgNum =64
-    const inum = this.RandomNum(1,bgNum)
+    var inum = this.RandomNum(1,bgNum)+this.index
+    if(inum>bgNum)
+    {
+      inum= inum - bgNum
+    }
     this.bgUrl = this.timestamp(url + inum + '.jpg');
     if("isShowDetailImg" in this.item.frontmatter){
       this.isShowDetailImg=this.item.frontmatter.isShowDetailImg;
@@ -94,8 +98,7 @@ export default {
     RandomNum(Min,Max){
       var Range = Max - Min;
       var Rand = Math.random();   
-      var num = Min + Math.round(Rand * Range);
-      return num;
+      return Min + Math.round(Rand * Range)
     }
   }
 }
