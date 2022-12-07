@@ -25,7 +25,8 @@ module.exports = {
         "DbAboutTime",
         "MySQLInstall",
         "MySQLMasterSlave",
-        "DBLock"
+        "DBLock",
+        "DbStatistics"
     ],
     "/views/Kingdee/SidebarFile/":[
         "2022/提单2022",
