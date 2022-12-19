@@ -1,5 +1,5 @@
 ---
-title: '计划模块知识点'
+title: '计划模块知识'
 date: 2022-12-14
 categories:
 - "Kingdee"
