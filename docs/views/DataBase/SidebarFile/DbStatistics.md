@@ -9,6 +9,7 @@ sidebar: true
 isFull: false
 isShowComments: true
 isShowIndex: true
+isShowDetailImg: true
 ---
 
 ## SqlServer数据库统计信息的操作
