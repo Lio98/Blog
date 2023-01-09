@@ -29,6 +29,7 @@ module.exports = {
         "DbStatistics"
     ],
     "/views/Kingdee/SidebarFile/":[
+        "2023/提单2023",
         "2022/提单2022",
         "2021/提单2021",
         "2021/BOS",
