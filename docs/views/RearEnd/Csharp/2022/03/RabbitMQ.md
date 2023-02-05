@@ -113,9 +113,16 @@ RabbitMQ是消息队列。简称：MQ。MQ全称为Message Queue, 消息队列�
         var body = ea.Body;
         var message = Encoding.UTF8.GetString(body.ToArray());
         Console.WriteLine(" [x] 创建商品 {0}", message);
+        // 业务逻辑执行完成后，手动消息确认
+        // 自动确认机制缺陷：
+        // 1、消息是否正常添加到数据库当中,所以需要使用手工确认
+        channel.BasicAck(ea.DeliveryTag, true);
+
     };
+    //有多个消费者时，如果不设置，则采用轮询的方式来消费
+    channel.BasicQos(0, 1, false);//Qos(防止多个消费者，能力不一致，导致的系统质量问题，每一次一个消费者只能成功消费一个)
     channel.BasicConsume(queue: "Product_create",
-                         autoAck: true,//自动消息确认
+                         autoAck: false,//关闭自动消息确认
                          consumer: consumer); 
     ```
 
