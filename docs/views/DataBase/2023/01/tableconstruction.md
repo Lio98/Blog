@@ -2,7 +2,7 @@
 title: '查询表中字段的结构'
 date: 2023-01-05
 categories:
-- "Csharp"
+- "DataBase"
 tags:
 - 学习笔记
 isFull: true 
