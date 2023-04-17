@@ -144,6 +144,214 @@ public class RedisLock
 }
 ```
 
+## 哨兵模式
+
+哨兵模式的主要作用：自动故障转移，一旦发现主库宕机，则在从库中通过选举新的master进行故障转移
+
+一个哨兵模式集群中，可以运行多个哨兵进程，这些进程使用流言协议来接受关于master是否下线的信息，并使用投票协议来决定是否执行自动故障转移，以及选择那个slave作为新的master。
+每个哨兵会向其他哨兵定时发送消息，以确认对方是否活着，如果发现对方在指定时间内未回应，则暂时认为对方宕机了
+
+
+redis.conf配置文件各参数详解
+```yaml
+# redis进程是否以守护进程的方式运行，yes为是，no为否(不以守护进程的方式运行会占用一个终端)。
+daemonize no
+# 指定redis进程的PID文件存放位置
+pidfile /var/run/redis.pid
+# redis进程的端口号
+port 7001
+#是否开启保护模式，默认开启。要是配置里没有指定bind和密码。开启该参数后，redis只会本地进行访问，拒绝外部访问。要是开启了密码和bind，可以开启。否则最好关闭设置为no。
+protected-mode yes
+# 绑定的主机地址
+bind 0.0.0.0
+# 客户端闲置多长时间后关闭连接，默认此参数为0即关闭此功能
+timeout 300
+# redis日志级别，可用的级别有debug.verbose.notice.warning
+loglevel verbose
+# log文件输出位置，如果进程以守护进程的方式运行，此处又将输出文件设置为stdout的话，就会将日志信息输出到/dev/null里面去了
+logfile stdout
+# 设置数据库的数量，默认为0可以使用select <dbid>命令在连接上指定数据库id
+databases 16
+# 指定在多少时间内刷新次数达到多少的时候会将数据同步到数据文件
+save <seconds> <changes>
+# 指定存储至本地数据库时是否压缩文件，默认为yes即启用存储
+rdbcompression yes
+# 指定本地数据库文件名
+dbfilename dump.db
+# 指定本地数据问就按存放位置
+dir ./
+# 指定当本机为slave服务时，设置master服务的IP地址及端口，在redis启动的时候他会自动跟master进行数据同步
+replicaof <masterip> <masterport>
+# 当master设置了密码保护时，slave服务连接master的密码
+masterauth <master-password>
+# 设置redis连接密码，如果配置了连接密码，客户端在连接redis是需要通过AUTH<password>命令提供密码，默认关闭
+requirepass footbared
+# 设置同一时间最大客户连接数，默认无限制。redis可以同时连接的客户端数为redis程序可以打开的最大文件描述符，如果设置 maxclients 0，表示不作限制。当客户端连接数到达限制时，Redis会关闭新的连接并向客户端返回 max number of clients reached 错误信息
+maxclients 128
+# 指定Redis最大内存限制，Redis在启动时会把数据加载到内存中，达到最大内存后，Redis会先尝试清除已到期或即将到期的Key。当此方法处理后，仍然到达最大内存设置，将无法再进行写入操作，但仍然可以进行读取操作。Redis新的vm机制，会把Key存放内存，Value会存放在swap区
+maxmemory<bytes>
+# 指定是否在每次更新操作后进行日志记录，Redis在默认情况下是异步的把数据写入磁盘，如果不开启，可能会在断电时导致一段时间内的数据丢失。因为redis本身同步数据文件是按上面save条件来同步的，所以有的数据会在一段时间内只存在于内存中。默认为no。
+appendonly no
+# 指定跟新日志文件名默认为appendonly.aof
+appendfilename appendonly.aof
+# 指定更新日志的条件，有三个可选参数 - no：表示等操作系统进行数据缓存同步到磁盘(快)，always：表示每次更新操作后手动调用fsync()将数据写到磁盘(慢，安全)， everysec：表示每秒同步一次(折衷，默认值)；
+appendfsync everysec
+```
+
+主机配置
+```yaml
+bind：0.0.0.0
+port：7001
+protected-mode：no
+daemonize：yes
+logfile：./redis.log
+requirepass：123456
+masterauth：123456
+```
+
+从机配置
+```yaml
+bind：0.0.0.0
+port：7002
+protected-mode：no
+daemonize：yes
+logfile：./redis.log
+replicaof 127.0.0.1 7001
+masterauth：123456
+```
+
+启动redis
+```bash
+./redis-server ./7001/redis7001.conf
+```
+
+sentinel.conf配置文件各参数详解
+
+```yaml
+# 哨兵sentinel实例运行的端口，默认26379  
+port 27001
+# 哨兵sentinel的工作目录
+dir ./
+# 是否开启保护模式，默认开启。
+protected-mode:no
+# 是否设置为后台启动。
+daemonize:yes
+# 哨兵sentinel的日志文件
+logfile:./sentinel.log
+# 哨兵sentinel监控的redis主节点的 
+## ip：主机ip地址
+## port：哨兵端口号
+## master-name：可以自己命名的主节点名字（只能由字母A-z、数字0-9 、这三个字符".-_"组成。）
+## quorum：当这些quorum个数sentinel哨兵认为master主节点失联 那么这时 客观上认为主节点失联了  
+# sentinel monitor <master-name> <ip> <redis-port> <quorum>  
+sentinel monitor mymaster 127.0.0.1 7001 1
+# 当在Redis实例中开启了requirepass，所有连接Redis实例的客户端都要提供密码。
+# sentinel auth-pass <master-name> <password>  
+sentinel auth-pass mymaster 123456 
+# 指定主节点应答哨兵sentinel的最大时间间隔，超过这个时间，哨兵主观上认为主节点下线，默认30秒  
+# sentinel down-after-milliseconds <master-name> <milliseconds>
+sentinel down-after-milliseconds mymaster 30000  
+# 指定了在发生failover主备切换时，最多可以有多少个slave同时对新的master进行同步。这个数字越小，完成failover所需的时间就越长；反之，但是如果这个数字越大，就意味着越多的slave因为replication而不可用。可以通过将这个值设为1，来保证每次只有一个slave，处于不能处理命令请求的状态。
+# sentinel parallel-syncs <master-name> <numslaves>
+sentinel parallel-syncs mymaster 1  
+# 故障转移的超时时间failover-timeout，默认三分钟，可以用在以下这些方面：
+## 1. 同一个sentinel对同一个master两次failover之间的间隔时间。  
+## 2. 当一个slave从一个错误的master那里同步数据时开始，直到slave被纠正为从正确的master那里同步数据时结束。  
+## 3. 当想要取消一个正在进行的failover时所需要的时间。
+## 4.当进行failover时，配置所有slaves指向新的master所需的最大时间。不过，即使过了这个超时，slaves依然会被正确配置为指向master，但是就不按parallel-syncs所配置的规则来同步数据了
+# sentinel failover-timeout <master-name> <milliseconds>  
+sentinel failover-timeout mymaster 180000
+# 当sentinel有任何警告级别的事件发生时（比如说redis实例的主观失效和客观失效等等），将会去调用这个脚本。一个脚本的最大执行时间为60s，如果超过这个时间，脚本将会被一个SIGKILL信号终止，之后重新执行。
+# 对于脚本的运行结果有以下规则：  
+## 1. 若脚本执行后返回1，那么该脚本稍后将会被再次执行，重复次数目前默认为10。
+## 2. 若脚本执行后返回2，或者比2更高的一个返回值，脚本将不会重复执行。  
+## 3. 如果脚本在执行过程中由于收到系统中断信号被终止了，则同返回值为1时的行为相同。
+# sentinel notification-script <master-name> <script-path>  
+sentinel notification-script mymaster /var/redis/notify.sh
+
+# 这个脚本应该是通用的，能被多次调用，不是针对性的。
+# sentinel client-reconfig-script <master-name> <script-path>
+sentinel client-reconfig-script mymaster /var/redis/reconfig.sh
+```
+
+哨兵配置文件设置
+```yaml
+#端口默认为26379。
+port:26379
+#关闭保护模式，可以外部访问。
+protected-mode:no
+#设置为后台启动。
+daemonize:yes
+#日志文件。
+logfile:./sentinel.log
+#指定主机IP地址和端口，并且指定当有2台哨兵认为主机挂了，则对主机进行容灾切换。
+sentinel monitor mymaster 127.0.0.1 7001 1
+#当在Redis实例中开启了requirepass，这里就需要提供密码。
+sentinel auth-pass mymaster 123456
+#这里设置了主机多少秒无响应，则认为挂了。
+sentinel down-after-milliseconds mymaster 3000
+#主备切换时，最多有多少个slave同时对新的master进行同步，这里设置为默认的1。
+sentinel parallel-syncs mymaster 1
+#故障转移的超时时间，这里设置为三分钟。
+sentinel failover-timeout mymaster 180000
+```
+
+启动哨兵命令
+
+```bash
+./redis-sentinel ./7001/sentinel27001.conf
+```
+通过下面命令查看集群启动情况
+
+```bash
+./redis-cli -p 27001
+```
+![](https://image.xjq.icu/2023/3/18/1679117904324_Snipaste_2023-03-18_13-37-49.jpg)
+
+C#代码连接集群模式
+
+```csharp
+using StackExchange.Redis;
+
+namespace RedisDemo.Utils
+{
+    public class RedisUtils
+    {
+        private static ConfigurationOptions configurationOptions = null;
+        private static readonly object Locker = new object();
+        private static ConnectionMultiplexer _redisConn;
+
+        public static ConnectionMultiplexer RedisConn
+        {
+            get
+            {
+                if (_redisConn == null)
+                {
+                    // 锁定某一代码块，让同一时间只有一个线程访问该代码块
+                    lock (Locker)
+                    {
+                        if (_redisConn == null || !_redisConn.IsConnected)
+                        {
+                            if (configurationOptions == null) 
+                            {
+                                configurationOptions = new ConfigurationOptions();
+                                configurationOptions.Password = "123456";
+                                configurationOptions.EndPoints.Add("192.168.88.12", 7001);
+                                configurationOptions.EndPoints.Add("192.168.88.12", 7002);
+                                configurationOptions.EndPoints.Add("192.168.88.12", 7003);
+                            }
+                            _redisConn = ConnectionMultiplexer.Connect(configurationOptions);
+                        }
+                    }
+                }
+                return _redisConn;
+            }
+        }
+    }
+}
+
+```
+
 ## Redis-cluster集群
 
 redis-cluster架构说明
@@ -159,7 +367,7 @@ redis-cluster架构说明
 
 - 在redis文件夹中创建6个配置文件，添加如下内容
 
-   ```conf
+   ```yuml
    port 6380
    bind 127.0.0.1        
    appendonly yes
