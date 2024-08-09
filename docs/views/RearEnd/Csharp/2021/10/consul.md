@@ -10,7 +10,7 @@ sidebar: true
 isShowComments: true
 isShowIndex: true
 isShowDetailImg: true
-DetailImgSrc: "https://lio98.gitee.io/sourceimg/1.jpg"
+DetailImgSrc: "https://image.xjq.icu/ltgitee/sourceimg/1.jpg"
 ---
 
 ## 注册中心

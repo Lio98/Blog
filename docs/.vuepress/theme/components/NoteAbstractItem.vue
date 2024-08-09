@@ -32,7 +32,7 @@ export default {
   created(){
     //地址 bgUrls
     //个数 bgNum
-    const url = "https://lio98.gitee.io/sourceimg/"
+    const url = "https://image.xjq.icu/ltgitee/sourceimg/"
     const bgNum =64
     var inum = this.RandomNum(1,bgNum)+this.index
     if(inum>bgNum)
