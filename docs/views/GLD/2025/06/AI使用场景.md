@@ -8,7 +8,7 @@ tags:
 sidebar: true
 isFull: false
 isShowComments: true
-isShowIndex: true
+isShowIndex: false
 isShowDetailImg: true
 ---
 
